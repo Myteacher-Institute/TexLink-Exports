@@ -115,12 +115,14 @@ footer {
     background-color: #000;
     justify-content: space-around;
     color: #fff;
+    font-family: poppins;
 }
 
-footer ul, footer ul a {
+footer ul, footer ul a, footer ul li{
     list-style-type: none;
     text-decoration: none;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 footer .fa-solid {
@@ -170,11 +172,6 @@ footer .body {
 footer .body hr {
     width: 80px;
     margin-bottom: 20px;
-}
-
-
-footer .body .three, .four {
-    margin-top: 25px;
 }
 
 footer .body .one > div{
