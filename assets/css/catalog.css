@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main .hero {
+    width: 100%;
+    height: 400px;
+    padding: 100px 0 0 0;
+    background-image: url("../img/istockphoto-490786066-1024x1024.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    justify-content: space-between;
+}
+
+
+main .hero div a {
+    font-size: smaller;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 10PX 20px;
+}
+
+main .hero div a:hover {
+    background-color: rgb(238, 173, 9);
+    color: rgb(0, 0, 0);
+    transition: 0.45s;
+    border: 3px solid rgb(238, 173, 9);
+}
+
+main .product-text {
+    font-size: 2rem;
+    padding: 50px;
+    line-height: 2;
+    text-align: center;
+}
+
+main .content {
+    width: 100%;
+    height: auto;
+    background-color: rgb(238, 173, 9);
+}
+
+main .content .catalog {
+    display: flex;
+}
+
+.catalog{
+    gap: 3px;
+    padding: 5px;
+    display: flex;
+}
+
+.catalog .product-column {
+    width: 100%;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog .product-column div {
+    width: 400px;
+    height: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.catalog .product-column div img {
+    inset: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalog .product-column div button {
+    width: 60%;
+    height: 20%;
+    margin: 10px;
+    color: rgb(255, 215, 0);
+    background-color: rgb(0, 0, 0);
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.7s;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.catalog .product-column div button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+.fa-solid {
+    display: inline;
+    color: black;
+}
