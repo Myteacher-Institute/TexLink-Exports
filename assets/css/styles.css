@@ -52,6 +52,16 @@ header nav ul li a:hover {
     font-size: 1.1em;
 }
 
+header nav ul li a.active {
+    color: #8a0707c7;
+    font-size: 1.1em;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
 main .hero {
     width: 100%;
     background-color: #000;
@@ -63,6 +73,7 @@ main .hero-image img {
     object-fit: cover;
     opacity: 0.9;
     position: relative;
+    margin-top: 4.5%; /* Adjust for fixed header */
 }
 
 main .hero-text {
@@ -83,7 +94,7 @@ main .hero-text p {
 main .hero-text button {
     width: 120px;
     height: 50px;
-    margin: 50px 0 0 23%;
+    margin: 50px 0 0 25%;
     border: 5px solid #fff;
     background-color: #171715da;
     border-radius: 5px; 
@@ -130,6 +141,10 @@ footer .fa-solid {
     margin-right: 10px;
 }
 
+footer .fa-solid:hover {
+    color: #f7a205ee;
+}
+
 footer .top {
     width: 100%;
     height: 110px;
@@ -143,11 +158,11 @@ footer .top {
 
 footer .top ul {
     list-style-type: none;
-    display: flex;
 }
 
 footer .top ul li {
     margin: 0 20px;
+    display: inline-flex;
 }
 
 footer .top ul li a {
