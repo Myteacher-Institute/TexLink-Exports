@@ -8,7 +8,32 @@
     right: 0;
     width: 360px;
     height: 100%;
-    background: white;
+    background: goldenrod;
     box-shadow: -2px 0 10px black;
-
+    padding: 65px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.cart-box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+h2 {
+    color: white;
+}
+.cart-price {
+    color: white;
+}
+.cart-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
 }
