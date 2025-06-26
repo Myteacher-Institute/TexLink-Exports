@@ -44,6 +44,7 @@ header nav ul li a {
     text-decoration: none;
     color: #333333;
     font-weight: 600;
+    font-size: 1.2em;
     margin: 0 60px;
 }
 
@@ -53,8 +54,17 @@ header nav ul li a:hover {
 }
 
 header nav ul li a.active {
-    color: #8a0707c7;
+    color: #015827f5;
     font-size: 1.1em;
+}
+
+header nav ul li a i {
+    margin-right: 10px;
+}
+
+header nav ul li a:hover i {
+    color: #015827f5;
+    font-size: larger;
 }
 
 main {
@@ -73,7 +83,8 @@ main .hero-image img {
     object-fit: cover;
     opacity: 0.9;
     position: relative;
-    margin-top: 4.5%; /* Adjust for fixed header */
+    margin-top: 4.5%;
+    /* Adjust for fixed header */
 }
 
 main .hero-text {
@@ -83,7 +94,7 @@ main .hero-text {
     left: 22%;
     color: #fff;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2.9em;
     font-family: roboto;
 }
 
@@ -92,22 +103,21 @@ main .hero-text p {
 }
 
 main .hero-text button {
-    width: 120px;
+    width: 130px;
     height: 50px;
-    margin: 50px 0 0 25%;
+    margin: 30px 0 0 25%;
     border: 5px solid #fff;
     background-color: #171715da;
-    border-radius: 5px; 
-    font-size: 0.3em;
-    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.4em;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
 }
 
 main .hero-text button:hover {
-    background-color: #fdfcfc;
-    font-size: large;
+    background-color: #c0b9b9f7;
+    font-size: 22px;
     border-color: #000;
 }
 
@@ -129,7 +139,9 @@ footer {
     font-family: poppins;
 }
 
-footer ul, footer ul a, footer ul li{
+footer ul,
+footer ul a,
+footer ul li {
     list-style-type: none;
     text-decoration: none;
     color: #fff;
@@ -172,7 +184,7 @@ footer .top ul li a {
 }
 
 footer .top ul li a:hover {
-    color: #8a0707c7;
+    color: #015827f5;
 }
 
 footer .body {
@@ -189,16 +201,16 @@ footer .body hr {
     margin-bottom: 20px;
 }
 
-footer .body .one > div{
+footer .body .one>div {
     display: flex;
 }
 
-footer .body > div img {
+footer .body>div img {
     width: 50px;
     height: 50px;
 }
 
-footer .body > div p {
+footer .body>div p {
     font-size: 1.5em;
     font-weight: 600;
     margin: 10px 0 0 18px;
@@ -227,4 +239,56 @@ footer .bottom h4 {
 footer .bottom a {
     text-decoration: none;
     color: #fff;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header nav ul li a {
+        margin: 0 15px;
+    }
+
+    main .hero-text {
+        left: 5%;
+        top: 20%;
+        font-size: 2em;
+    }
+
+    main .hero-text p {
+        margin-left: 13%;
+    }
+
+    main .hero-text button {
+        width: 110px;
+        height: 48px;
+        margin-left: 34%;
+        font-size: large;
+    }
+
+
+    footer .top {
+        width: 100%;
+        height: 80px;
+        padding-right: 50px;
+    }
+
+    footer .top h3 {
+        width: 46%;
+    }
+
+    footer .top ul li {
+        width: 54%;
+        margin: 0;
+        padding-right: 38px;
+        display: inline;
+    }
+
+    footer .body {
+        display: inline-flex;
+        align-items: center;
+       margin: 0 55px 0 10px;
+    }
+
+    /* footer .body>div {
+        margin-bottom: 20px;
+    } */
+
 }
