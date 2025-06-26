@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --pri: #f7a205ee;
+    --sec: #000;
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -12,7 +17,7 @@
 header {
     width: 100%;
     height: 70px;
-    background-color: #f7a205ee;
+    background-color: var(--pri);
     font-family: "roboto";
     display: flex;
     justify-content: space-between;
