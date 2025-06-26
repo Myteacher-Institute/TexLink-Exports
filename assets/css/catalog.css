@@ -5,70 +5,69 @@
     font-family: Poppins, sans-serif;
 }
 
-
-.container {
-    width: 100%;
-    display: flex;
-    min-height: 100vh;
-}
-
 main {
     width: 100%;
     min-height: 100vh;
 }
 
-.search-container {
-    margin: 5px auto;
+main .hero {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    font-size: 3rem;
+    color: white;
+    padding: 100px 0 0 0;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-image: url("../img/istockphoto-490786066-1024x1024.jpg");
+}
+
+main .hero span {
+    width: 100%;
+    height:100px;
+    padding: 20px;
     text-align: center;
+    background-color: #222;
 }
 
-input[type="text"] {
-    width: 90%;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    color: goldenrod;
-    border-radius: 10px;
-    background-color: black;
+main div a {
+    padding: 10PX ;
+    font-size: 30px;
+    margin-left: 50%;
+    border-radius: 40px;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
 }
 
-.search-container button {
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: teal;
-} 
-
-.item {
-    font-size: 20px;
-    padding: 10px;
+main div a:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.45s;
+    background-color: rgb(238, 173, 9);
+    border: 3px solid rgb(238, 173, 9);
 }
-
-.section div {
-    margin: 0;
-}
-
 
 main .product-text {
     padding: 50px;
+    line-height: 2;
     font-size: 2rem;
     text-align: center;
-    
 }
 
 main .content {
     width: 100%;
     height: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 173, 9);
 }
 
 main .content .catalog {
     display: flex;
 }
 
-.catalog {
+.catalog{
     gap: 3px;
     padding: 5px;
     display: flex;
@@ -88,16 +87,14 @@ main .content .catalog {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: goldenrod;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .catalog .product-column div img {
     inset: 0;
     width: 100%;
     height: 80%;
-    border: none;
     object-fit: cover;
+    border: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -106,22 +103,21 @@ main .content .catalog {
     width: 40%;
     height: 20%;
     margin: 10px;
-    border: none;
     font-size: 30px;
-    transition: 0.7s;
+    border: none;
     border-radius: 10px;
+    transition: 0.7s;
     color: rgb(255, 215, 0);
     background-color: rgb(0, 0, 0);
 }
 
 .catalog .product-column div button:hover {
+    background-color: white;
     border: none;
     color: black;
-    background-color: white;
 }
 
 .fa-solid {
-    font-size: 30px;
-    color: black;
     display: inline;
+    color: black;
 }
