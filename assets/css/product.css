@@ -5,13 +5,6 @@
     font-family: Poppins, sans-serif;
 }
 
-
-.container {
-    width: 100%;
-    display: flex;
-    min-height: 100vh;
-}
-
 main {
     width: 100%;
     min-height: 100vh;
@@ -88,7 +81,7 @@ main .content .catalog {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: goldenrod;  
+    background-color: rgb(218, 165, 32);  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,4 +117,9 @@ main .content .catalog {
     font-size: 30px;
     color: black;
     display: inline;
+    margin: 0 20px 0 20px;
+}
+
+.fa-solid:hover {
+    color: goldenrod;
 }
