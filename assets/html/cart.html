@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/cart.css">
     <title>Cart — TexLink Exports</title>
 </head>
@@ -11,7 +14,28 @@
 <body>
     <header></header>
     <main>
-        <section>Hello World</section>
+        <section class="cart">
+            <h1>YOUR CART</h1>
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="../image/product 1.jpg" alt="" class="cart-image">
+                    <div class="cart-detail">
+                        <h2 class="cart-product-title">Blue t-shirt</h2>
+                        <span class="cart-price">$100</span>
+                        <div class="cart-quantity">
+                            <button id="decrease">-</button>
+                            <span class="number">1</span>
+                            <button id="increase">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+        </section>
     </main>
     <footer></footer>
 
