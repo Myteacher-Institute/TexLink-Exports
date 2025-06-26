@@ -1,12 +1,17 @@
+:root {
+    --sec: #000;
+    --pri: #f7a205ee;
+}
+
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
     box-sizing: border-box;
 }
 
-:root {
-    --pri: #f7a205ee;
-    --sec: #000;
+body {
+    font-family: Poppins, sans-serif;
 }
 
 .container {
@@ -15,15 +20,16 @@
 }
 
 header {
+    top: 0;
     width: 100%;
     height: 70px;
     background-color: var(--pri);
-    font-family: "roboto";
+    font-family: "Roboto";
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #333333;
-    position: fixed;
+    position: sticky;
     z-index: 1;
 }
 
@@ -79,60 +85,54 @@ main {
 
 main .hero {
     width: 100%;
-    background-color: #000;
+    height: 70dvh;
+    display: grid;
+    position: relative;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-main .hero-image img {
+main img {
+    inset: 0;
     width: 100%;
-    height: 500px;
+    z-index: -1;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.9;
-    position: relative;
-    margin-top: 4.5%;
-    /* Adjust for fixed header */
+    position: absolute;
 }
 
 main .hero-text {
-    width: 100%;
-    position: absolute;
-    top: 21%;
-    left: 22%;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .hero-text h2 {
     color: #fff;
-    font-weight: 700;
     font-size: 2.9em;
-    font-family: roboto;
+    font-weight: 700;
+    font-family: Roboto;
 }
 
 main .hero-text p {
-    margin-left: 8%;
-}
-
-main .hero-text button {
-    width: 130px;
-    height: 50px;
-    margin: 30px 0 0 25%;
-    border: 5px solid #fff;
-    background-color: #171715da;
-    border-radius: 5px;
-    font-size: 0.4em;
     color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-main .hero-text button:hover {
-    background-color: #c0b9b9f7;
-    font-size: 22px;
-    border-color: #000;
+    font-size: 1.8em;
 }
 
 main .hero-text a {
-    text-decoration: none;
     color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #171715da;
 }
 
 main .hero-text a:hover {
     color: #000;
+    background-color: #fff;
 }
 
 footer {
