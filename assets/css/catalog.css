@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 main {
@@ -13,39 +13,47 @@ main {
 main .hero {
     width: 100%;
     height: 400px;
-    padding: 100px 0 0 0;
-    background-image: url("../img/istockphoto-490786066-1024x1024.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
     display: flex;
-    flex-direction: column;
     font-size: 3rem;
+    color: white;
+    padding: 100px 0 0 0;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
     justify-content: space-between;
+    background-repeat: no-repeat;
+    background-image: url("../img/istockphoto-490786066-1024x1024.jpg");
 }
 
+main .hero span {
+    width: 100%;
+    height:100px;
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+}
 
-main .hero div a {
-    font-size: smaller;
-    list-style-type: none;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+main div a {
+    padding: 10PX ;
+    font-size: 30px;
+    margin-left: 50%;
     border-radius: 40px;
-    padding: 10PX 20px;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
 }
 
-main .hero div a:hover {
-    background-color: rgb(238, 173, 9);
+main div a:hover {
     color: rgb(0, 0, 0);
     transition: 0.45s;
+    background-color: rgb(238, 173, 9);
     border: 3px solid rgb(238, 173, 9);
 }
 
 main .product-text {
-    font-size: 2rem;
     padding: 50px;
     line-height: 2;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -75,11 +83,11 @@ main .content .catalog {
 .catalog .product-column div {
     width: 400px;
     height: 300px;
+    border-radius: 10px;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 .catalog .product-column div img {
     inset: 0;
@@ -92,16 +100,15 @@ main .content .catalog {
 }
 
 .catalog .product-column div button {
-    width: 60%;
+    width: 40%;
     height: 20%;
     margin: 10px;
-    color: rgb(255, 215, 0);
-    background-color: rgb(0, 0, 0);
     font-size: 30px;
     border: none;
     border-radius: 10px;
     transition: 0.7s;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    color: rgb(255, 215, 0);
+    background-color: rgb(0, 0, 0);
 }
 
 .catalog .product-column div button:hover {
