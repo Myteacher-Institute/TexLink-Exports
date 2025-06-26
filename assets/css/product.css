@@ -53,9 +53,9 @@ input[type="text"] {
 
 main .product-text {
     padding: 50px;
-    line-height: 2;
     font-size: 2rem;
     text-align: center;
+    
 }
 
 main .content {
@@ -121,6 +121,7 @@ main .content .catalog {
 }
 
 .fa-solid {
+    font-size: 30px;
     color: black;
     display: inline;
 }
