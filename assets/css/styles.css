@@ -159,13 +159,13 @@ footer .fa-solid {
 }
 
 footer .fa-solid:hover {
-    color: #f7a205ee;
+    color: var(--pri);
 }
 
 footer .top {
     width: 100%;
     height: 110px;
-    background-color: #f7a205ee;
+    background-color: var(--pri);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -289,7 +289,7 @@ footer .bottom a {
     footer .body {
         display: inline-flex;
         align-items: center;
-       margin: 0 55px 0 10px;
+        margin: 0 55px 0 10px;
     }
 
     /* footer .body>div {
