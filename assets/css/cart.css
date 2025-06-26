@@ -52,9 +52,16 @@ h2 {
 .cart-quantity {
     display: flex;
     width: 100px;
-    border: 1px solid #fff;
+    border: 1px solid #999;
     border-radius: 6px;
 }
 .cart-quantity button {
-    
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+}
+.decrease {
+    color: #999;
 }
