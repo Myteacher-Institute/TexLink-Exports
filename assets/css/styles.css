@@ -1,17 +1,16 @@
 :root {
     --sec: #000;
-    --pri: #f7a205ee;
+    --pri: #cc9933;
 }
 
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .container {
@@ -33,14 +32,14 @@ header {
     z-index: 1;
 }
 
-header .logo img {
+header img {
     width: 50px;
     height: 50px;
-    margin-left: 35px;
+    margin-left: 20px;
 }
 
 header nav {
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 header nav ul {
@@ -60,22 +59,20 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #8a0707c7;
     font-size: 1.1em;
 }
 
 header nav ul li a.active {
-    color: #015827f5;
+    color: #7a5408;
     font-size: 1.1em;
 }
 
 header nav ul li a i {
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 header nav ul li a:hover i {
-    color: #015827f5;
-    font-size: larger;
+    font-size: x-large;
 }
 
 main {
@@ -111,28 +108,142 @@ main .hero-text {
 
 main .hero-text h2 {
     color: #fff;
-    font-size: 2.9em;
+    font-size: 3em;
     font-weight: 700;
-    font-family: Roboto;
+    font-family: Montserrat;
 }
 
 main .hero-text p {
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 main .hero-text a {
     color: #fff;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 600;
+    margin-top: 20px;
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #171715da;
+    text-decoration: none;
 }
 
 main .hero-text a:hover {
     color: #000;
     background-color: #fff;
+}
+
+main .product-text {
+    padding: 50px;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+main .content {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+main .content .fa-solid {
+    font-size: 30px;
+    color: black;
+    display: inline;
+}
+
+main .content .catalog {
+    display: flex;
+}
+
+.catalog {
+    gap: 3px;
+    padding: 5px;
+    display: flex;
+}
+
+.catalog .product-column {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+
+    /* flex-direction: column; */
+}
+
+.catalog .product-column div {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: goldenrod;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.catalog .product-column div img {
+    inset: 0;
+    width: 100%;
+    height: 80%;
+    border: none;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalog .product-column div button {
+    width: 40%;
+    height: 20%;
+    margin: 10px;
+    border: none;
+    font-size: 30px;
+    transition: 0.7s;
+    border-radius: 10px;
+    color: rgb(255, 215, 0);
+    background-color: rgb(0, 0, 0);
+}
+
+.catalog .product-column div button:hover {
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+.customer .cr{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-content: center;
+    color: black;
+    font-size: 70px;
+    padding: 30px 0 90px 0;
+    letter-spacing: 10px;
+} 
+
+ .f2 .reviews{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    color: black;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 30px 0;
+}
+ 
+.f2 .reviews .wrapper {
+    background-color: goldenrod;
+    width: 90%;
+    height: 300px;  
+    margin: 1.5px;
+    border-radius: 15px;
+}
+
+.f2 .reviews .wrapper h2, p {
+    text-align: center;
+    padding: 10px;
 }
 
 footer {
@@ -141,12 +252,12 @@ footer {
     background-color: #000;
     justify-content: space-around;
     color: #fff;
-    font-family: poppins;
+    ;
 }
 
 footer ul,
-footer ul a,
-footer ul li {
+footer ul li,
+footer ul li a {
     list-style-type: none;
     text-decoration: none;
     color: #fff;
@@ -155,7 +266,7 @@ footer ul li {
 
 footer .fa-solid {
     color: #fff;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 footer .fa-solid:hover {
@@ -178,7 +289,7 @@ footer .top ul {
 }
 
 footer .top ul li {
-    margin: 0 20px;
+    margin-right: 12px;
     display: inline-flex;
 }
 
@@ -186,6 +297,7 @@ footer .top ul li a {
     text-decoration: none;
     color: #000;
     font-weight: 600;
+    margin-top: 35px;
 }
 
 footer .top ul li a:hover {
@@ -211,8 +323,8 @@ footer .body .one>div {
 }
 
 footer .body>div img {
-    width: 50px;
-    height: 50px;
+    width: 112px;
+    height: 112px;
 }
 
 footer .body>div p {
@@ -225,6 +337,10 @@ footer .body h3 {
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+footer .body .two ul .black a {
+    color: #000;
 }
 
 footer .bottom {
