@@ -1,6 +1,6 @@
 :root {
-    --sec: #000;
-    --pri: #cc9933;
+    --sec: rgba(158, 18, 97, 0.942);
+    --pri: rgb(218, 32, 134);
 }
 
 * {
@@ -11,6 +11,7 @@
 
 body {
     font-family: Montserrat, sans-serif;
+    background-color: var(--pri);
 }
 
 .container {
@@ -36,10 +37,6 @@ header img {
     width: 50px;
     height: 50px;
     margin-left: 20px;
-}
-
-header nav {
-    /* margin-right: 20px; */
 }
 
 header nav ul {
@@ -134,56 +131,52 @@ main .hero-text a:hover {
     background-color: #fff;
 }
 
-main .product-text {
+main .content h3 {
     padding: 50px;
     font-size: 2rem;
     text-align: center;
+    color: #000;
 
 }
 
 main .content {
     width: 100%;
     height: auto;
-    background-color: rgb(255, 255, 255);
+    color: var(--pri);
 }
 
 main .content .fa-solid {
     font-size: 30px;
     color: black;
-    display: inline;
 }
 
-main .content .catalog {
-    display: flex;
-}
-
-.catalog {
-    gap: 3px;
-    padding: 5px;
-    display: flex;
-}
-
-.catalog .product-column {
+.catalog .product-section {
     width: 100%;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-around;
-
-    /* flex-direction: column; */
+    padding: 0 10px 30px 7%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 30px;    
 }
 
-.catalog .product-column div {
-    width: 400px;
-    height: 300px;
+.catalog .product-section .products {
+    width: 580px;
+    height: 340px;
     border-radius: 10px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: goldenrod;
+    background-color: var(--sec);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.catalog .product-column div img {
+.catalog .product-section .products div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.catalog .product-section div img {
     inset: 0;
     width: 100%;
     height: 80%;
@@ -193,7 +186,7 @@ main .content .catalog {
     border-top-right-radius: 10px;
 }
 
-.catalog .product-column div button {
+.catalog .product-section div a {
     width: 40%;
     height: 20%;
     margin: 10px;
@@ -201,17 +194,23 @@ main .content .catalog {
     font-size: 30px;
     transition: 0.7s;
     border-radius: 10px;
-    color: rgb(255, 215, 0);
-    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-color: var(--pri);
+    text-decoration: none;
 }
 
-.catalog .product-column div button:hover {
+.catalog .product-section div a:hover {
+    font-size: 1.5em;
+    transition: font-size 0.4s ease-in-out;
     border: none;
-    color: black;
-    background-color: white;
 }
 
-.customer .cr{
+.customer-reviews {
+    width: 100%;
+    height: auto;
+}
+
+.customer-reviews h1 {
     display: flex;
     width: 100%;
     height: 70px;
@@ -221,29 +220,38 @@ main .content .catalog {
     font-size: 70px;
     padding: 30px 0 90px 0;
     letter-spacing: 10px;
-} 
+}
 
- .f2 .reviews{
+.customer-reviews .reviews {
     display: flex;
     width: 100%;
     height: 300px;
     color: black;
     justify-content: space-around;
-    gap: 10px;
-    margin: 30px 0;
-}
- 
-.f2 .reviews .wrapper {
-    background-color: goldenrod;
-    width: 90%;
-    height: 300px;  
-    margin: 1.5px;
-    border-radius: 15px;
+    margin: 30px 0 10px 0;
 }
 
-.f2 .reviews .wrapper h2, p {
+.customer-reviews .reviews .wrapper {
+    background-color: var(--sec);
+    width: 90%;
+    height: 300px;
+    margin: 1.5px;
+    border-radius: 15px;
+    margin: 0 20px;
+    align-content: center;
+}
+
+.customer-reviews .reviews .wrapper h2 {
     text-align: center;
     padding: 10px;
+    font-weight: bold;
+}
+
+.customer-reviews .reviews .wrapper p {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 footer {
@@ -276,7 +284,7 @@ footer .fa-solid:hover {
 footer .top {
     width: 100%;
     height: 110px;
-    background-color: var(--pri);
+    background-color: var(--sec);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -301,7 +309,7 @@ footer .top ul li a {
 }
 
 footer .top ul li a:hover {
-    color: #015827f5;
+    font-size: 1.1em;
 }
 
 footer .body {
