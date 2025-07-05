@@ -17,6 +17,7 @@ body {
 .container {
     width: 100%;
     min-height: 100vh;
+    position: relative;
 }
 
 header {
@@ -32,6 +33,20 @@ header {
     position: sticky;
     z-index: 1;
 }
+
+header .bars {
+    display: none;
+}
+
+/* header nav {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+} */
+
+ header nav .close {
+    display: none;
+ }
 
 header img {
     width: 50px;
@@ -131,18 +146,18 @@ main .hero-text a:hover {
     background-color: #fff;
 }
 
+main .content {
+    width: 100%;
+    height: auto;
+    color: var(--pri);
+}
+
 main .content h3 {
     padding: 50px;
     font-size: 2rem;
     text-align: center;
     color: #000;
 
-}
-
-main .content {
-    width: 100%;
-    height: auto;
-    color: var(--pri);
 }
 
 main .content .fa-solid {
@@ -152,7 +167,7 @@ main .content .fa-solid {
 
 .catalog .product-section {
     width: 100%;
-    padding: 0 10px 30px 7%;
+    padding-left: 7%;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 30px;    
@@ -235,7 +250,7 @@ main .content .fa-solid {
     background-color: var(--sec);
     width: 90%;
     height: 300px;
-    margin: 1.5px;
+    /* margin: 1.5px; */
     border-radius: 15px;
     margin: 0 20px;
     align-content: center;
@@ -260,7 +275,6 @@ footer {
     background-color: #000;
     justify-content: space-around;
     color: #fff;
-    ;
 }
 
 footer ul,
@@ -370,7 +384,145 @@ footer .bottom a {
     color: #fff;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
+    header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+   header nav {
+        /* display: none; */
+    }
+     header .bars {
+        position: absolute;
+        right: 10%;
+        top: 5%;
+        color: rgb(255, 255, 255);
+    }
+
+    header nav .close {
+    display: block;
+    float: right;
+    margin: 10px 20px 0px 0px;
+    color: rgb(255, 255, 255);
+    display: block;
+ } 
+ 
+    header nav ul li {
+        display: block;
+        margin: 50px 0px 50px 30px;
+    }
+    
+    header nav ul li a {
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    .catalog .product-section {
+    width: 100%;
+    padding: 0 5%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog .product-section .products {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: var(--sec);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-reviews h1 {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    padding: 0;
+    letter-spacing: 5px;
+    margin-top: 15px;
+}
+
+.customer-reviews .reviews {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    color: black;
+}
+
+.customer-reviews .reviews .wrapper {
+    background-color: var(--sec);
+    width: 90%;
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 15px;
+    align-content: center;
+}
+
+footer {
+    width: 100%;
+    height: 820px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin: 45px 0;
+}
+
+footer .body {
+    width: 100%;
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+footer .body div {
+    margin-top: 25px;
+    /* justify-content: flex-start; */
+}
+
+footer .body>div img {
+    width: 70px;
+    height: 70px;
+}
+
+footer .body>div p {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 10px 0 0 18px;
+}
+
+footer .body h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+footer .body .two {
+    height: 90px;
+}
+
+footer .bottom {
+    width: 100%;
+    /* height: 100px; */
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding-top: 10px; */
+}
+/* @media screen and (min-width: 481px) and (max-width: 768px) {
     header nav ul li a {
         margin: 0 15px;
     }
@@ -420,4 +572,4 @@ footer .bottom a {
         margin-bottom: 20px;
     } */
 
-}
+} */
