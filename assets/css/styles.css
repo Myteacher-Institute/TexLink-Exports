@@ -130,7 +130,7 @@ main .hero-text a {
     background-color: #171715da;
 }
 
-main .hero-text a:hover {
+main .hero-text button:hover a {
     color: #000;
     background-color: #fff;
 }
