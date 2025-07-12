@@ -155,7 +155,7 @@ main .content .catalog {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: goldenrod;  
+    background-color: rgb(218, 165, 32);  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

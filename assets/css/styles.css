@@ -140,7 +140,7 @@ main .hero-text a {
     text-decoration: none;
 }
 
-main .hero-text a:hover {
+main .hero-text button:hover a {
     color: #000;
     background-color: #fff;
 }
