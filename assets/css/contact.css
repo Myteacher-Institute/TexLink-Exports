@@ -10,442 +10,1194 @@
     font-family: "Poppins", sans-serif;
 }
 
-.container {
-    width: 100%;
-    min-height: 100vh;
+body{
     background-color: white;
 }
 
-.container .hp {
-    margin: 15px 0 15px 15px;
-    height: 15gpx;
-    
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
 }
 
-.container .hp a {
+.container .header-logo {
+    width: 100%;
+    height: 5vh;
+    padding: 10px 0 0 10px;
+}
+
+
+.container .logo a{
     text-decoration: none;
     color: black;
+    font-weight: bolder;
 }
 
 header {
     display: flex;
     width: 100%;
-    height: 250px;
-    background-color: #f5f5f5;
+    height: 50vh;
+    background-color: #fff;
     justify-content: center;
-    align-content: center;
-    font-weight: 700px;
-    font-size: 60px;
-    letter-spacing: 40px;
-    color: black;
-    padding: 40px 0 0 40px;
-    background-image: url("../Images/b-picture.jpg");
+    /* align-content: center; */
+    font-weight: bold;
+    color: whitesmoke;
+    background-image: url("../Images/fabric.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     filter: brightness(100%);
+    position: relative;
 }
 
-header .cu {
-    margin: auto;
+
+header p {
+    position: absolute;
+    top: 30%;
+    
 }
 
 main {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    height: 100vh;
-    background-color: lightgray;
-    color: black;
-    padding-top: 20px;
-}
-
-main .s1{
-    width: 40%;
-    height: 100vh;
-    margin: auto;
-}
-
-main .s1 .enquiry{
-    background-color: #ffffff;
     width: 100%;
-    height: 80px;
-    padding: 20px 0 0 20px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-top: 56px;
+    height: 75vh;
+    background-color: #fff;
 }
 
-main .s1 .enquiry p {
-    margin-left: -1px;
+main .hero{
+  width: 100%;
+  margin-top: 30px;
 }
 
-main .s1 .enquiry:hover {
-    background-color: rgb(244, 234, 234);
-    color: black;
-}
-
-form {
-    height: 600px;
-    padding-top: 30px;
+section .parent {
+    display: flex;
+    width: 100%;
     gap: 20px;
-    padding-left: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-form p {
-    font-weight: 300px;
-}
-
-form:hover{
-    background-color: white;
-    color:black ;
-}
-
-form input{
-    padding: 5px 40px ;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-form input:hover {
-    background-color: black;
-}
-
-.submit{
-    margin: 10px 0 10px 0;
-    padding: 5px 20px;
-    border: 2px solid light lightgray;
-    border-radius: 10px;
-    background-color: white;
-    font-weight: bolder;
-}
-
-.warning{
-    margin-left: 1px;
-}
-
-button:hover{
-    color: white;
-    background-color: lightgray;
-}
-
-main .s2 {
-    width: 40%;
-    height: 700px;
-    margin: auto;
-    background-image: url("../Images/main-body-pic.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
-}
-
-footer {
-    width: 100%;
-    height: 600px;
-    background-color: lightgray;
-}
-
-footer .f1 {
-    display: flex;
-    background-color: lightgray;
-}
-
-footer .f1 iframe{
-    width: 50%;
-    height: 400px;
-    margin: 30px 0 20px 30px;
-}
-
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
-}
-
-
-footer .customer .cr{
-    display: flex;
-    width: 100%;
-    height: 70px;
-    justify-content: center;
-    align-content: center;
-    color: black;
-    font-size: 70px;
-    padding: 30px 0 90px 0;
-    letter-spacing: 10px;
-    text-shadow: 3px 3px 5px;
-} 
-
-
- .f2 .reviews{
-    display: flex;
-    width: 100%;
-    height: 300px;
-    color: black;
-    justify-content: space-around;
-    gap: 5px;
-    margin-top: 60px;
     
 }
- 
-.f2 .reviews .wrapper {
-    background-color: goldenrod;
-    width: 90%;
-    height: 300px;  
-    margin: 1.5px;
+
+section .iframe-div {
+    width: 50%
+}
+
+main .hero iframe {
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
 }
 
 
-footer div .hoa, .adr {
-    margin-left: 30px;
-    margin-top: 30px;
+section .address {
+    width: 50%;
 }
 
-footer div .fa-solid{
-    margin-left: 30px;
+main .address-div {
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-left: 70px;
+    line-height: 2;
+    font-size: 12px;
 }
 
-footer .number{
-    color: gold;
-    letter-spacing: 10px;
+main .address-div h1 {
+    font-size: 22px;
 }
 
-h3 .fa-solid {
-    margin-left: 0;
-    color: gold;
+main .ul-div {
+    margin-top: 100px;
 }
 
-footer .customer {
-display: flex;
-height: 100px;
-color: black;
-justify-content: center;
-align-content: center;
+main .ul-div h1 {
+    font-size: 14px;
 }
 
-.customer .cr {
-    font-size: 40px;
+main ul {
+    display: flex;
+    gap: 20px;
 }
 
-
-.f2 .reviews {
-    display: fle;
+main ul li {
+    display: inline;
 }
 
-
-
-.wrapper {
-    padding: 30px 20px 200px 30px;
-
-} 
-
-.reviews .wrapper h2{
-    background-color: white;
-    border-radius: 10px;
-    height: 30px;
-    width: 180px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    margin-left: 30px;
+main .ul-div li a i {
     color: black;
 }
 
-.img {
-    margin: 0 10px 20px 60px;
-    border-radius: 50%;
-}
-
-
-
-.btn {
-    background: none;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    /* padding: 5px 10px 5px 10px; */
-    margin: 70px 0 50px 10px;
-    border: 2px solid white;
-} 
-
-
-footer .f22{
-    display: flex;
-    background-color: lightgray;
+main .second-section {
     width: 100%;
-    height: 430px;
-    margin-top: 10px;
 }
-
 
  .key-officers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    line-height: 2.5;
-    justify-content: space-between;
-    align-content: center;
-
-}
-
-.cts, p, h3 {
-    margin-left: 30px;
-}
-
-.cts {
-    margin-top: 30px;
-}
-
-span{
-    color: black;
-}
-
-.cts h3{
-    color: black;
-    font-size: 25px;
-}
-
-b {
-    color: black;
-    margin-right: 10px;
-}
-
-footer .socials {
     display: flex;
     width: 100%;
-    height: 60px;
-    background-color: gray;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: space-around;
+    background-color: #fff;
+    line-height: 2;
+    padding: 20px 10px 0 40px;
+    color: black;
 }
 
-footer ul {
- margin-top: 30px;
-}
-
-footer ul li {
-    display: inline;
-    margin-left: 150px;
-    height: 70px;
-    font-weight: bolder;
-}  
-
-
-
-
-
-@media only screen and (max-width: 360px) {
-  .container {
-    background-color: red;
-  }
-  header {
-    display: flex;
-    height: 60px;
-    justify-content: center;
-    align-content: center;
-    font-weight: 20;
+.second-section .cts {
+    width: 100%;
     font-size: 14px;
-    letter-spacing: 2px;
-    color: black;
-    padding: 10px;
-  }
-
-  main {
-    display: block;
-    width: 100%;
-    padding-top: 2px;
-    height: 760px;
-    background-color: purple;
-    color: blue;
-    padding-top: 5px;
-  }
-  
-  main .s1{
-    width: 100%;
-    height: 70px;
-    padding: 5px 0 0 5px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-top: 15px;
-  }
-
-  main .s1 .enquiry {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100px;
-    padding: 5px 0 0 15px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    margin-top: 15px;
+    margin-top: 70px;
 }
 
-main .s1 .enquiry h1 {
- padding: 5px 0 0 30px;
- }
 
-main .s1 .enquiry p {
- padding: 5px 0 0 0;
+.second-section span{
+    font-size: 22px;
+    padding-bottom: 15px;
 }
 
-form {
-    height: 600px;
-    padding-top: 30px;
-    gap: 20px;
-    padding-left: 10px;
-    font-weight: bold;
+.second-section span hr {
+    width: 50px;
+    height: 2px;
+    margin-top: -10px;
     color: black;
 }
 
-form p {
-    font-weight: 300px;
+.second-section .cts p {
+    font-size: 12px;
+    font-style: italic;
 }
 
-main .s2 {
-    background-image: none;
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) and (min-width: 360px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 4vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
 }
 
-footer {
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    height: 170px;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+        height: 100%;
+       
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+       padding-left:5px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: block;
+        margin-top: 120px;
+        /* padding: 0.5rem 0 0.125rem 1.25rem; */
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 13px;
+    }
+
+    .second-section .cts {
+        font-size: 14px;
+    }
+
+    .second-section span{
+        font-size: 20px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 6px;
+        font-style: italic;
+}
+
+}
+
+
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        font-weight: bold;
+        position: relative;
+    }
+
+    header p {
+        padding-top: 30px;
+        color: black;
+        font-size: 13px;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: black;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        /* padding: 0 0.3125rem 0.3125rem 0.3125rem; */
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    height: 170px;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: block;
+        margin-top: 80px;
+        padding-left: 20px; 
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 13px;
+    }
+
+    .second-section .cts {
+        font-size: 14px;
+    }
+
+    .second-section span{
+        font-size: 20px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 6px;
+        font-style: italic;
+}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        font-weight: 18.75rem;
+        font-size: 1.125rem;
+        position: relative;
+    }
+
+    header p {
+        position: absolute;
+        top: 15%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    height: 170px;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: block;
+        margin-top: 80px;
+        padding: 0.5rem 0 0.25rem 1.25rem;
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 13px;
+    }
+
+    .second-section .cts {
+        font-size: 14px;
+    }
+
+    .second-section span{
+        font-size: 20px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 6px;
+        font-style: italic;
+}
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        font-weight: 18.75rem;
+        font-size: 1.125rem;
+        position: relative;
+    }
+
+    header p {
+        position: absolute;
+        top: 35%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        height: 75vh;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    height: 350px;
+    margin: 25px 0 40px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     
+ .key-officers {
+    display: flex;
     width: 100%;
-    height: 300px;
-    background-color: lightgray;
+    justify-content: space-around;
+    background-color: #fff;
+    line-height: 2;
+    padding: 20px 10px 0 40px;
+    color: black;
 }
 
-footer .f1 {
-    display: block;
-    background-color: lightgray;
-}
-footer .f1 iframe{
-    height: 150px;
+.second-section .cts {
     width: 100%;
-    height: 400px;
-    margin: 10px;
-    padding-right: 20px;
+    font-size: 12px;
+    margin-top: 280px;
 }
 
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
-}
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
+
+.second-section span{
+    font-size: 17px;
+    padding-bottom: 15px;
 }
 
-footer .f1 div {
-    width: 90%;
-    height: 300px;
-    margin-top: 1px;
-    background-color: white;
-    line-height:1;
-    padding-top: 20px;
+.second-section span hr {
+    width: 50px;
+    height: 2px;
+    margin-top: -10px;
+    color: black;
+}
+
+.second-section .cts p {
+    font-size: 10px;
+    font-style: italic;
 }
 
 }
+
+
+
+
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        font-weight: 18.75rem;
+        font-size: 1.125rem;
+        position: relative;
+    }
+
+    header p {
+        position: absolute;
+        top: 15%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+       
+       
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: block;
+        margin-top: 80px;
+        padding: 0.5rem 0 0.25rem 1.25rem;
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 13px;
+    }
+
+    .second-section .cts {
+        font-size: 14px;
+    }
+
+    .second-section span{
+        font-size: 20px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 6px;
+        font-style: italic;
+}
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        font-weight: 18.75rem;
+        font-size: 1.125rem;
+        position: relative;
+    }
+
+    header p {
+        position: absolute;
+        top: 35%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    height: 350px;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .address {
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+       margin-left: 5px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: flex;
+        margin-top: 10px;
+        padding: 0.5rem 0 0.25rem 1.25rem;
+        font-size: 14px;
+        margin-bottom: -80px;
+        gap: 13px;
+        line-height: 3;
+    }
+
+    .second-section .cts {
+        font-size: 10px;
+    }
+
+    .second-section span{
+        font-size: 14px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 7px;
+        font-style: italic;
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container{
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    .container .header-logo {
+        width: 100%;
+        height: 2vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+    }
+
+    .container .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+    header {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        font-weight: 18.75rem;
+        font-size: 1.125rem;
+        position: relative;
+    }
+
+    header p {
+        position: absolute;
+        top: 15%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        padding-top: 0.3125rem;
+        color: #fff;
+    }
+
+    main .hero {
+        width: 100%;
+        margin: 0 0 0 0.3125rem;
+        padding: 0 0.3125rem 0.3125rem 0.3125rem;
+    }
+
+    section .parent{
+        display: block;
+        width: 100%;
+    }
+
+    section .iframe-div {
+    width: 97%;
+    margin: 15px 0 10px -22px;
+    }
+
+    main .hero iframe {
+        width: 100%;
+       
+       
+    }
+
+    section .address {
+        width: 100%;
+    }
+
+    main .address-div {
+        width: 100%;
+        color: black;
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    main .address-div h1 {
+        font-size: 13px;
+    }
+
+    main .ul-div {
+       margin-top: 20px;
+    }
+
+    main .ul-div h1 {
+        font-size: 7px;
+    }
+
+    main ul {
+        display: flex;
+        gap: 7px;
+    }
+
+
+    main ul li {
+        display: inline;
+    }
+
+    main .ul-div li a i {
+        color: black;
+    }
+
+    main .second-section {
+        width: 100%;
+    }
+
+     .key-officers {
+        display: flex;
+        margin-top: 80px;
+        padding: 0.5rem 0 0.25rem 1.25rem;
+        font-size: 14px;
+        margin-bottom: 20px;
+        gap: 13px;
+        color: red;
+    }
+
+    .second-section .cts {
+        font-size: 14px;
+    }
+
+    .second-section span{
+        font-size: 20px;
+    }
+    
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+}
+
+    .second-section .cts p {
+        font-size: 6px;
+        font-style: italic;
+}
+
+}
+
+
+
+
+
+
+
+
 
