@@ -529,9 +529,10 @@ footer .bottom a {
     }
 
     main .content #btn {
-    margin-top: 15px;
-    padding-left: 16px;
-}
+        margin-top: 15px;
+        padding-left: 16px;
+    }
+
     .catalog .product-section {
         width: 100%;
         padding: 0 5%;
@@ -648,3 +649,4 @@ footer .bottom a {
         text-align: center;
         padding-bottom: 22px;
     }
+}
