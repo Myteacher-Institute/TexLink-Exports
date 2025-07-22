@@ -12,38 +12,21 @@
 </head>
 
 <body>
-     <header>
-            <a href="./index.html"><img src="./assets/images/logo.jpg" alt="TexLink Exports Logo"></a>
-
-            <div class="bars"><i class="fa-solid fa-bars"></i></div>
-            <nav>
-
-                <div class="close"><i class="fa-solid fa-x"></i></div>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-
-                    <li><a href="./assets/html/about.html">About</a></li>
-
-                    <li><a href="./assets/html/product.html">Products</a></li>
-                    
-
-                    <li><a href="./assets/html/contact.html">Contact</a></li>
-
-                    <li><a href="./assets/html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-
-            </nav>
-
-        </header>
-
+    <header>
+        <a href="#">Ecommerce</a>
+        <div id="cart-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-item-count"></span>
+        </div>
+    </header>
     <main>
         <section class="cart">
             <h1>YOUR CART</h1>
             <div class="cart-content">
-                <div class="cart-box">
+                <!-- <div class="cart-box">
                     <img src="../image/product 1.jpg" alt="" class="cart-image">
                     <div class="cart-detail">
-                        <h2 class="cart-product-title">Blue t-shirt</h2>
+                        <h2 class="cart-product-title">Blue Hoodie</h2>
                         <span class="cart-price">$100</span>
                         <div class="cart-quantity">
                             <button id="decrease">-</button>
@@ -51,14 +34,121 @@
                             <button id="increase">+</button>
                         </div>
                     </div>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
+                    <i class="fa-solid fa-trash cart-remove"></i>
+                </div> -->
             </div>
             <div class="total">
                 <div class="total-title">Total</div>
                 <div class="total-price">$0</div>
             </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class="fa-solid fa-square-xmark" id="cart-close"></i>
         </section>
+
+        <section class="shop">
+            <h3>Our Products</h3>
+            <div class="Product-content">
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/pearl Blush fabric.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Pearl Blush Fabric</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/product 1.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Nice Blue Hoodie</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/Green wool linen.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Green Wool Linen Fabric</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/Nice men senator.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Yellow men senator</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/plaid christmas dress.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Plaid Gown</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/vintage-shirts-men-1.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Vintage Shirt</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/women navy plaid gown.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Navy Plaid Gpwn</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/women woven tartan.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Women woven tartan</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+                <div class="product-box">
+                    <div class="image-box">
+                        <img src="../image/Red silk fabric.jpg" alt="">
+                    </div>
+                    <h2 class="product-title">Red silk Fabric</h2>
+                    <div class="price-and-cart">
+                        <span class="price">$100</span>
+                        <i class="fa-solid fa-bag-shopping add-cart"></i>
+                    </div>
+
+                </div>
+            </div>
+
     </main>
     
    <footer>
