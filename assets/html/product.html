@@ -14,6 +14,36 @@
     </head>
 
     <body>
+        <div id="cart-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-item-count"></span>
+        </div>
+        <section class="cart">
+            <h1>YOUR CART</h1>
+            <div class="cart-content">
+                <!-- <div class="cart-box">
+                    <img src="../image/product 1.jpg" alt="" class="cart-image">
+                    <div class="cart-detail">
+                        <h2 class="cart-product-title">Blue Hoodie</h2>
+                        <span class="cart-price">$100</span>
+                        <div class="cart-quantity">
+                            <button id="decrease">-</button>
+                            <span class="number">1</span>
+                            <button id="increase">+</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-trash cart-remove"></i>
+                </div> -->
+                <!-- rgb (215, 213, 213) -->
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class="fa-solid fa-square-xmark" id="cart-close"></i>
+        </section>
+
         <!-- 🧾 Product Detail Page -->
         <div id="product-page" class="product-container hidden">
 
@@ -51,81 +81,81 @@
 
         <!-- 🖼 Product Gallery -->
         <div id="gallery" class="gallery">
-            <div class="gallery-item" data-id="1">
+            <div class="gallery-item product-box" data-id="1">
                 <img src="../images/Tropical Shirt th.jpg" alt="Tropical Shirt" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
                 <button id="add-to-cart">Add to Cart <i class="fa-solid fa-cart"></i></button>
             </div>
 
-            <div class="gallery-item" data-id="2">
+            <div class="gallery-item product-box" data-id="2">
                 <img src="../images/Urban Black Hoodie main.jpg" alt="Urban Hoodie" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
                 <button id="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="3">
+            <div class="gallery-item product-box" data-id="3">
                 <img src="../images/women woven tartan.jpg" alt="Tartan" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
                 <button id="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="4">
+            <div class="gallery-item product-box" data-id="4">
                 <img src="../images/vintage-shirts-men-1.jpg" alt="vintage-shirts-men-1" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="5">
+            <div class="gallery-item product-box" data-id="5">
                 <img src="../images/Green wool linen.jpg" alt="Green wool" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="6">
+            <div class="gallery-item product-box" data-id="6">
                 <img src="../images/plaid christmas dress.jpg" alt="Christmas Dress">
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="7">
+            <div class="gallery-item product-box" data-id="7">
                 <img src="../images/Red silk fabric.jpg" alt="Red Silk">
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="8">
+            <div class="gallery-item product-box" data-id="8">
                 <img src="../images/product 33.jpg" alt="Blue Cardigan Set">
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="9">
+            <div class="gallery-item product-box" data-id="9">
                 <img src="../images/women navy plaid gown.jpg" alt="Plaid Gown" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="10">
+            <div class="gallery-item product-box" data-id="10">
                 <img src="../images/pearl Blush fabric.jpg" alt="Blush fabric" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
 
-            <div class="gallery-item" data-id="11">
+            <div class="gallery-item product-box" data-id="11">
                 <img src="../images/Nice men senator.jpg" alt="Men Senator" />
-                <h3 class="product-name"></h3>
+                <h3 class="product-title"></h3>
                 <p class="product-price"></p>
-                <button id="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-cart">Add to Cart</button>
             </div>
         </div>
 
