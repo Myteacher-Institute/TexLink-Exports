@@ -84,7 +84,6 @@ const gallery = document.getElementById("gallery");
 const productPage = document.getElementById("product-page");
 const backBtn = document.getElementById("back-btn");
 
-// 3️⃣ Loop through gallery items to display name & price, and add click handler
 items.forEach(item => {
     const id = parseInt(item.dataset.id);
     const product = products.find(p => p.id === id);
