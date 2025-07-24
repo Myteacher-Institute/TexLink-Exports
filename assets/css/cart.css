@@ -220,15 +220,16 @@ h2 {
 .btn-buy {
     display: block;
     padding: 10px 20px;
-    background: #fff;
-    border-radius: 1px;
+    /* background: rgb (215, 213, 213); */
+    background-color: rgb(215, 213, 213);
+    border-radius: 5px;
     font-size: 12px;
     margin: 20px auto 0;
     cursor: pointer;
 }
 .btn-buy:hover{
     transform: scale(1.1);
-    color: aquamarine;
+    color: rgb(4, 112, 76);
 }
 #cart-close {
     position: absolute;
