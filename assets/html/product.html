@@ -13,141 +13,41 @@
 </head>
 
 <body>
-        <main>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search.....">
-                <button onclick="search()">Search</button>
-                <div id="results"></div>
+    <div id="gallery" class="gallery"></div>
+    <div id="product-page"  class="product-container hidden">
+        <button id="back-btn">Back to Gallery</button>
+        
+        <div class="image-gallery">
+            <div class="main-image">
+                <img src="images/main-placeholder.jpg" alt="Product Image" id="main-img" />
             </div>
-    
-            <section class="content">
-                <div class="product-text">
-                    <h3>Our Products</h3>
-                </div>
-    
-                <div class="catalog">
-    
-                    <div class="product-column">
-                        <div>
-                            <img src="../images/Cotton textile (1).webp">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../images/Cotton image(2).webp">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (8).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (7).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (5).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (6).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-column">
-                        <div>
-                            <img src="../img/download (7).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/images (4).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (8).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (5).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/fab roll.jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/images (3).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-column">
-                        <div>
-                            <img src="../img/images (3).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (8).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/fab roll.jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (6).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (7).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/download (5).jpeg">
-                            <div>
-                                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
-            </section>
-    
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+
+        <div class="product-details">
+            <h1 class="product-title" id="product-title"></h1>
+            <p class="product-price" id="product-price"></p>
+            <p class="product-description" id="product-description"></p>
+
+            <div class="options">
+                <label for="size">Size:</label>
+                <select id="size">
+                    <option value="">Select size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="qty">Quantity:</label>
+                <input type="number" id="qty" value="1" min="1" />
+            </div>
+
+            <button id="add-to-cart">Add to Cart</button>
+        </div>
     </div>
-       </main>
-    <footer></footer>
 
     <script src="../js/product.js"></script>
 </body>
