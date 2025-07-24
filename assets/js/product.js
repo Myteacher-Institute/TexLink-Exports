@@ -1,159 +1,126 @@
-// Sample product data
+// 1️⃣ Define the product data
 const products = [
     {
         id: 1,
-        name: "Tropical Print Shirt",
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["../assets/images/Tropical Shirt main.jpg", 
-                "../assets/images/Tropical Shirt th", 
-                "../assets/images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
         id: 2,
-        name: "Urban Black Hoodie",
+        name: "Urban Hoodie",
+        price: "$49.99",
+        description: "A cool hoodie for streetwear lovers.",
+        image: "../images/Urban Black Hoodie main.jpg"
+    },
+    {
+        id: 3,
+        name: "Tropical Shirt",
+        price: "$29.99",
+        description: "Fine checkered Tartan.",
+        image: "../images/women woven tartan.jpg"
+    },
+    {
+        id: 4,
+        name: "Tropical Shirt",
         price: "$59.99",
-        description: "Premium cotton hoodie for streetwear lovers.",
-        images: ["../assets/images/Urban Black Hoodie main.jpg", 
-                "../assets/images/Urban hoodie th (F).jpg", 
-                "../assets/images/Urban White Hoodie.jpg"]
+        description: "Smart Red-White Vintage Shirt for Men",
+        image: "../images/vintage-shirts-men-1.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 5,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Green wool linen.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 6,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 7,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 8,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 9,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 10,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 11,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-        id: 1,
-        name: "Tropical Print Shirt",
+        id: 12,
+        name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
-    },
-    {
-        id: 1,
-        name: "Tropical Print Shirt",
-        price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
-    },
-    {
-        id: 1,
-        name: "Tropical Print Shirt",
-        price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
-    },
-    {
-        id: 1,
-        name: "Tropical Print Shirt",
-        price: "$39.99",
-        description: "A lightweight tropical shirt, perfect for summer.",
-        images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
 ];
 
-// DOM Elements
+// 2️⃣ Get references to elements on the page
+const items = document.querySelectorAll(".gallery-item");
 const gallery = document.getElementById("gallery");
 const productPage = document.getElementById("product-page");
 const backBtn = document.getElementById("back-btn");
 
-// Product Page Elements
-const mainImg = document.getElementById("main-img");
-const thumbnails = document.getElementById("thumbnails");
-const titleEl = document.getElementById("product-title");
-const priceEl = document.getElementById("product-price");
-const descEl = document.getElementById("product-description");
+// 3️⃣ Loop through gallery items to display name & price, and add click handler
+items.forEach(item => {
+    const id = parseInt(item.dataset.id);
+    const product = products.find(p => p.id === id);
 
-// Load gallery
-products.forEach((product, index) => {
-    const item = document.createElement("div");
-    item.classList.add("gallery-item");
-    item.innerHTML = `
-      <img src="${product.images[0]}" alt="${product.name}" />
-      <h3>${product.name}</h3>
-      <p>${product.price}</p>
-    `;
-    item.addEventListener("click", () => showProduct(index));
-    gallery.appendChild(item);
+    if (product) {
+        item.querySelector(".product-name").textContent = product.name;
+        item.querySelector(".product-price").textContent = product.price;
+
+        // ✅ Show product detail on click
+        item.addEventListener("click", () => {
+            document.getElementById("product-title").textContent = product.name;
+            document.getElementById("product-price").textContent = product.price;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("main-img").src = product.image;
+
+            gallery.classList.add("hidden");
+            productPage.classList.remove("hidden");
+        });
+    }
 });
 
-// Show product details
-function showProduct(index) {
-    const product = products[index];
-    gallery.classList.add("hidden");
-    productPage.classList.remove("hidden");
-
-    // Load product info
-    titleEl.textContent = product.name;
-    priceEl.textContent = product.price;
-    descEl.textContent = product.description;
-    mainImg.src = product.images[0];
-
-    // Load thumbnails
-    thumbnails.innerHTML = "";
-    product.images.forEach((imgSrc) => {
-        const thumb = document.createElement("img");
-        thumb.src = imgSrc;
-        thumb.classList.add("thumb");
-        thumb.addEventListener("click", () => {
-            mainImg.src = imgSrc;
-        });
-        thumbnails.appendChild(thumb);
-    });
-}
-
-// Back to gallery
+// 4️⃣ Handle back to gallery
 backBtn.addEventListener("click", () => {
     productPage.classList.add("hidden");
     gallery.classList.remove("hidden");
 });
 
-// Add to cart action
+// 5️⃣ Handle Add to Cart
 document.getElementById("add-to-cart").addEventListener("click", () => {
     const size = document.getElementById("size").value;
     const qty = document.getElementById("qty").value;
