@@ -16,77 +16,69 @@ const products = [
     },
     {
         id: 3,
-        name: "Tropical Shirt",
+        name: "Woven Tartan",
         price: "$29.99",
         description: "Fine checkered Tartan.",
         image: "../images/women woven tartan.jpg"
     },
     {
         id: 4,
-        name: "Tropical Shirt",
+        name: "Vintage Men's Shirts",
         price: "$59.99",
         description: "Smart Red-White Vintage Shirt for Men",
         image: "../images/vintage-shirts-men-1.jpg"
     },
     {
         id: 5,
-        name: "Tropical Shirt",
-        price: "$39.99",
-        description: "A lightweight summer shirt.",
+        name: "Green Wool Linen",
+        price: "$19.99",
+        description: "Green Woll Linen",
         image: "../images/Green wool linen.jpg"
     },
     {
         id: 6,
-        name: "Tropical Shirt",
+        name: "Christmas Plaid Dress",
         price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
+        description: "Plaid Dress for the Holidays",
+        image: "../images/plaid christmas dress.jpg"
     },
     {
         id: 7,
-        name: "Tropical Shirt",
+        name: "Red Silk Fabric",
         price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
+        description: "Red Silk Fabric",
+        image: "../images/Red silk fabric.jpg"
     },
     {
         id: 8,
         name: "Tropical Shirt",
         price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
+        description: "Blue Cardigan Set",
+        image: "../images/product 33.jpg"
     },
     {
         id: 9,
-        name: "Tropical Shirt",
-        price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
+        name: "Navy Plaid Gown",
+        price: "$45.50",
+        description: "Women Navy Plaid Gown",
+        image: "../images/women navy plaid gown.jpg"
     },
     {
         id: 10,
-        name: "Tropical Shirt",
-        price: "$39.99",
+        name: "Pearl Blush Fabric",
+        price: "$12.43",
         description: "A lightweight summer shirt.",
         image: "../images/Tropical Shirt th.jpg"
     },
     {
         id: 11,
-        name: "Tropical Shirt",
-        price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
-    },
-    {
-        id: 12,
-        name: "Tropical Shirt",
-        price: "$39.99",
-        description: "A lightweight summer shirt.",
-        image: "../images/Tropical Shirt th.jpg"
+        name: "Men's Senator",
+        price: "$16.00",
+        description: "Nice Men Senator.",
+        image: "../images/Nice men senator.jpg"
     },
 ];
 
-// 2️⃣ Get references to elements on the page
 const items = document.querySelectorAll(".gallery-item");
 const gallery = document.getElementById("gallery");
 const productPage = document.getElementById("product-page");
@@ -114,13 +106,11 @@ items.forEach(item => {
     }
 });
 
-// 4️⃣ Handle back to gallery
 backBtn.addEventListener("click", () => {
     productPage.classList.add("hidden");
     gallery.classList.remove("hidden");
 });
 
-// 5️⃣ Handle Add to Cart
 document.getElementById("add-to-cart").addEventListener("click", () => {
     const size = document.getElementById("size").value;
     const qty = document.getElementById("qty").value;
