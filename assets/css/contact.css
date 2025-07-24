@@ -1,162 +1,190 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
     background-color: white;
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-}
-
-.container .header-logo {
+header {
     width: 100%;
     height: 5vh;
-    padding: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-decoration: none;
+    background-color: white;
 }
 
-
-.container .logo a{
+header a {
     text-decoration: none;
+    font-weight: bolder;
     color: black;
+}
+
+/* Hero styling */
+.hero {
+    width: 100%;
+    height: 50dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+}
+
+.hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    z-index: 1;
+    /* font-size: clamp(3rem, 7vw, 5rem); */
+    font-size: 3.3em;
+}
+
+.hero p {
+    z-index: 1;
+    font-size: 1.8em;
+    word-spacing: 2px;
+    text-align: center;
     font-weight: bolder;
 }
 
-header {
+.hero button {
+    z-index: 1;
     display: flex;
-    width: 100%;
-    height: 50vh;
-    background-color: #fff;
-    justify-content: center;
-    /* align-content: center; */
+    align-items: center;
+    justify-self: center;
+    height: 40px;
+    width: 130px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1.5px 0 0 22px;
+    cursor: pointer;
+    margin-top: 20px;
     font-weight: bold;
-    color: whitesmoke;
-    background-image: url("../Images/fabric.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: brightness(100%);
-    position: relative;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    background-color: rgb(215, 213, 213);
 }
 
-
-header p {
-    position: absolute;
-    top: 30%;
-    
+.hero button:hover {
+    color: black;
+    font-size: 1.05em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
 }
 
-main {
-    width: 100%;
-    height: 75vh;
-    background-color: #fff;
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-main .hero{
-  width: 100%;
-  margin-top: 30px;
-}
-
-section .parent {
+.map {
+    gap: 4rem;
+    height: 500px;
     display: flex;
-    width: 100%;
-    gap: 20px;
-    
+    margin: 50px 25px;
+    align-items: center;
 }
 
-section .iframe-div {
-    width: 50%
-}
-
-main .hero iframe {
-    width: 100%;
-    height: 100%;
-    margin-left: 20px;
-}
-
-
-section .address {
+.map .iframe {
     width: 50%;
-}
-
-main .address-div {
-    width: 100%;
     height: 100%;
-    color: black;
-    padding-left: 70px;
-    line-height: 2;
-    font-size: 12px;
 }
 
-main .address-div h1 {
-    font-size: 22px;
-}
-
-main .ul-div {
-    margin-top: 100px;
-}
-
-main .ul-div h1 {
-    font-size: 14px;
-}
-
-main ul {
+.map .address {
+    height: 100%;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
 }
 
-main ul li {
-    display: inline;
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
 }
 
-main .ul-div li a i {
+.address .icons .fa-brands {
     color: black;
 }
 
-main .second-section {
-    width: 100%;
+
+.location button {
+    z-index: 1;
+   display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 40px;
+    width: 130px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    /* padding: 1.5px 0 0 22px; */
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(215, 213, 213);
 }
 
- .key-officers {
+    .location button:hover {
+    color: black;
+    font-size: 1.05em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+.location button:hover {
+    color: white;
+    box-shadow: 0 0 4px white;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.key-officers {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    width: 85%;
     background-color: #fff;
     line-height: 2;
     padding: 20px 10px 0 40px;
     color: black;
+    margin-top: -100px;
+    margin-bottom: 10px;
 }
 
-.second-section .cts {
+.key-officers .cts {
     width: 100%;
     font-size: 14px;
     margin-top: 70px;
 }
 
 
-.second-section span{
+.key-officers span {
     font-size: 22px;
     padding-bottom: 15px;
 }
 
-.second-section span hr {
-    width: 50px;
-    height: 2px;
-    margin-top: -10px;
-    color: black;
-}
 
-.second-section .cts p {
+.key-officers .cts p {
     font-size: 12px;
     font-style: italic;
 }
@@ -178,13 +206,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 4vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -193,12 +221,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -207,7 +235,7 @@ main .second-section {
         font-size: 1rem;
     }
 
-    
+
     main {
         display: block;
         width: 100%;
@@ -215,27 +243,27 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    height: 170px;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        height: 170px;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
         height: 100%;
-       
+
     }
 
     section .address {
@@ -254,8 +282,8 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
-       padding-left:5px;
+        margin-top: 20px;
+        padding-left: 5px;
     }
 
     main .ul-div h1 {
@@ -280,7 +308,7 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: block;
         margin-top: 120px;
         /* padding: 0.5rem 0 0.125rem 1.25rem; */
@@ -293,21 +321,21 @@ main .second-section {
         font-size: 14px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 20px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 6px;
         font-style: italic;
-}
+    }
 
 }
 
@@ -319,13 +347,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -334,12 +362,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -349,7 +377,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         padding-top: 30px;
         color: black;
         font-size: 13px;
@@ -362,24 +390,24 @@ main .second-section {
         color: black;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         /* padding: 0 0.3125rem 0.3125rem 0.3125rem; */
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    height: 170px;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        height: 170px;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
         height: 100%;
     }
@@ -400,7 +428,7 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
+        margin-top: 20px;
     }
 
     main .ul-div h1 {
@@ -425,10 +453,10 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: block;
         margin-top: 80px;
-        padding-left: 20px; 
+        padding-left: 20px;
         font-size: 14px;
         margin-bottom: 20px;
         gap: 13px;
@@ -438,21 +466,21 @@ main .second-section {
         font-size: 14px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 20px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 6px;
         font-style: italic;
-}
+    }
 
 }
 
@@ -466,13 +494,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -481,12 +509,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -497,7 +525,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         position: absolute;
         top: 15%;
     }
@@ -509,24 +537,24 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    height: 170px;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        height: 170px;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
         height: 100%;
     }
@@ -547,7 +575,7 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
+        margin-top: 20px;
     }
 
     main .ul-div h1 {
@@ -572,7 +600,7 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: block;
         margin-top: 80px;
         padding: 0.5rem 0 0.25rem 1.25rem;
@@ -585,21 +613,21 @@ main .second-section {
         font-size: 14px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 20px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 6px;
         font-style: italic;
-}
+    }
 
 }
 
@@ -609,13 +637,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -624,12 +652,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -639,7 +667,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         position: absolute;
         top: 35%;
     }
@@ -652,24 +680,24 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    height: 350px;
-    margin: 25px 0 40px -22px;
+        width: 97%;
+        height: 350px;
+        margin: 25px 0 40px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
         height: 100%;
     }
@@ -690,7 +718,7 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
+        margin-top: 20px;
     }
 
     main .ul-div h1 {
@@ -715,40 +743,40 @@ main .second-section {
         width: 100%;
     }
 
-     
- .key-officers {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    background-color: #fff;
-    line-height: 2;
-    padding: 20px 10px 0 40px;
-    color: black;
-}
 
-.second-section .cts {
-    width: 100%;
-    font-size: 12px;
-    margin-top: 280px;
-}
+    .key-officers {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        background-color: #fff;
+        line-height: 2;
+        padding: 20px 10px 0 40px;
+        color: black;
+    }
+
+    .second-section .cts {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 280px;
+    }
 
 
-.second-section span{
-    font-size: 17px;
-    padding-bottom: 15px;
-}
+    .second-section span {
+        font-size: 17px;
+        padding-bottom: 15px;
+    }
 
-.second-section span hr {
-    width: 50px;
-    height: 2px;
-    margin-top: -10px;
-    color: black;
-}
+    .second-section span hr {
+        width: 50px;
+        height: 2px;
+        margin-top: -10px;
+        color: black;
+    }
 
-.second-section .cts p {
-    font-size: 10px;
-    font-style: italic;
-}
+    .second-section .cts p {
+        font-size: 10px;
+        font-style: italic;
+    }
 
 }
 
@@ -762,13 +790,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -777,12 +805,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -793,7 +821,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         position: absolute;
         top: 15%;
     }
@@ -805,26 +833,26 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
-       
-       
+
+
     }
 
     section .address {
@@ -843,7 +871,7 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
+        margin-top: 20px;
     }
 
     main .ul-div h1 {
@@ -868,7 +896,7 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: block;
         margin-top: 80px;
         padding: 0.5rem 0 0.25rem 1.25rem;
@@ -881,21 +909,21 @@ main .second-section {
         font-size: 14px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 20px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 6px;
         font-style: italic;
-}
+    }
 
 }
 
@@ -905,13 +933,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -920,12 +948,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -936,7 +964,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         position: absolute;
         top: 35%;
     }
@@ -948,24 +976,24 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    height: 350px;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        height: 350px;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
         height: 100%;
     }
@@ -988,8 +1016,8 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
-       margin-left: 5px;
+        margin-top: 20px;
+        margin-left: 5px;
     }
 
     main .ul-div h1 {
@@ -1014,7 +1042,7 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: flex;
         margin-top: 10px;
         padding: 0.5rem 0 0.25rem 1.25rem;
@@ -1028,21 +1056,21 @@ main .second-section {
         font-size: 10px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 14px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 7px;
         font-style: italic;
-}
+    }
 
 }
 
@@ -1055,13 +1083,13 @@ main .second-section {
         background-color: white;
     }
 
-    .container{
+    .container {
         width: 100%;
         height: 60vh;
         background-color: #fff;
     }
 
-    .container .header-logo {
+    .container .main .hero-logo {
         width: 100%;
         height: 2vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
@@ -1070,12 +1098,12 @@ main .second-section {
     }
 
     .container .logo a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
 
-    header {
+    main .hero {
         display: flex;
         width: 100%;
         height: 30vh;
@@ -1086,7 +1114,7 @@ main .second-section {
         position: relative;
     }
 
-    header p {
+    main .hero p {
         position: absolute;
         top: 15%;
     }
@@ -1098,26 +1126,26 @@ main .second-section {
         color: #fff;
     }
 
-    main .hero {
+    main .map {
         width: 100%;
         margin: 0 0 0 0.3125rem;
         padding: 0 0.3125rem 0.3125rem 0.3125rem;
     }
 
-    section .parent{
+    section .parent {
         display: block;
         width: 100%;
     }
 
     section .iframe-div {
-    width: 97%;
-    margin: 15px 0 10px -22px;
+        width: 97%;
+        margin: 15px 0 10px -22px;
     }
 
-    main .hero iframe {
+    main .map iframe {
         width: 100%;
-       
-       
+
+
     }
 
     section .address {
@@ -1136,7 +1164,7 @@ main .second-section {
     }
 
     main .ul-div {
-       margin-top: 20px;
+        margin-top: 20px;
     }
 
     main .ul-div h1 {
@@ -1161,7 +1189,7 @@ main .second-section {
         width: 100%;
     }
 
-     .key-officers {
+    .key-officers {
         display: flex;
         margin-top: 80px;
         padding: 0.5rem 0 0.25rem 1.25rem;
@@ -1175,29 +1203,20 @@ main .second-section {
         font-size: 14px;
     }
 
-    .second-section span{
+    .second-section span {
         font-size: 20px;
     }
-    
+
     .second-section span hr {
         width: 50px;
         height: 2px;
         margin-top: -10px;
         color: black;
-}
+    }
 
     .second-section .cts p {
         font-size: 6px;
         font-style: italic;
-}
+    }
 
 }
-
-
-
-
-
-
-
-
-
