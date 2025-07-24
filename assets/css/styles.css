@@ -208,10 +208,10 @@ main .content p {
 
 .catalog .product-section {
     width: 100%;
-    padding-left: 9%;
-    display: grid;
-    grid-template: 1fr 1fr / 650px 650px;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6%;
 }
 
 .catalog .product-section .products {
@@ -220,6 +220,7 @@ main .content p {
     border-radius: 10px;
     background-color: var(--sec);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2.5rem 0;
 }
 
 .catalog .product-section div img {
