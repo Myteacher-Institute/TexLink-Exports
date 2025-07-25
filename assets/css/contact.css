@@ -201,6 +201,12 @@ header a {
 
 
 
+
+
+
+
+
+
 @media only screen and (max-width: 400px) and (min-width: 360px) {
 
     body {
@@ -213,130 +219,204 @@ header a {
         background-color: #fff;
     }
 
-    .container .main .hero-logo {
+    header {
         width: 100%;
-        height: 4vh;
+        height: 2.5vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
         font-size: 0.625rem;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
     }
 
-    .container .logo a {
+    header a {
         text-decoration: none;
         color: black;
         font-weight: bolder;
     }
 
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 1rem;
+    .hero {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
     }
 
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
+}
 
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        height: 170px;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-        height: 100%;
-
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-        padding-left: 5px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
 
 
-    main ul li {
-        display: inline;
-    }
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
 
-    main .ul-div li a i {
-        color: black;
-    }
 
-    main .second-section {
-        width: 100%;
-    }
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
 
-    .key-officers {
-        display: block;
-        margin-top: 120px;
-        /* padding: 0.5rem 0 0.125rem 1.25rem; */
-        font-size: 14px;
-        margin-bottom: 20px;
-        gap: 13px;
-    }
 
-    .second-section .cts {
-        font-size: 14px;
-    }
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-    .second-section span {
-        font-size: 20px;
-    }
 
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
 
-    .second-section .cts p {
-        font-size: 6px;
-        font-style: italic;
-    }
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: block;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 5px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
+}
 
 }
 
@@ -344,7 +424,7 @@ header a {
 
 @media only screen and (max-width: 600px) and (min-width: 400px) {
 
-    body {
+   body {
         background-color: white;
     }
 
@@ -354,134 +434,204 @@ header a {
         background-color: #fff;
     }
 
-    .container .main .hero-logo {
+    header {
         width: 100%;
-        height: 2vh;
+        height: 2.5vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
         font-size: 0.625rem;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
     }
 
-    .container .logo a {
+    header a {
         text-decoration: none;
         color: black;
         font-weight: bolder;
     }
 
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        align-content: center;
-        font-weight: bold;
-        position: relative;
+    .hero {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
     }
 
-    main .hero p {
-        padding-top: 30px;
-        color: black;
-        font-size: 13px;
-    }
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: black;
-    }
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
+}
 
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        /* padding: 0 0.3125rem 0.3125rem 0.3125rem; */
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        height: 170px;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
 
 
-    main ul li {
-        display: inline;
-    }
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
 
-    main .ul-div li a i {
-        color: black;
-    }
 
-    main .second-section {
-        width: 100%;
-    }
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
 
-    .key-officers {
-        display: block;
-        margin-top: 80px;
-        padding-left: 20px;
-        font-size: 14px;
-        margin-bottom: 20px;
-        gap: 13px;
-    }
 
-    .second-section .cts {
-        font-size: 14px;
-    }
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-    .second-section span {
-        font-size: 20px;
-    }
 
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
 
-    .second-section .cts p {
-        font-size: 6px;
-        font-style: italic;
-    }
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: block;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 5px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
+}
 
 }
 
@@ -501,140 +651,213 @@ header a {
         background-color: #fff;
     }
 
-    .container .main .hero-logo {
+    header {
         width: 100%;
-        height: 2vh;
+        height: 2.5vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
         font-size: 0.625rem;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
     }
 
-    .container .logo a {
+    header a {
         text-decoration: none;
         color: black;
         font-weight: bolder;
     }
 
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        align-content: center;
-        font-weight: 18.75rem;
-        font-size: 1.125rem;
-        position: relative;
+    .hero {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
     }
 
-    main .hero p {
-        position: absolute;
-        top: 15%;
-    }
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
+}
 
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        height: 170px;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
 
 
-    main ul li {
-        display: inline;
-    }
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
 
-    main .ul-div li a i {
-        color: black;
-    }
 
-    main .second-section {
-        width: 100%;
-    }
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
 
-    .key-officers {
-        display: block;
-        margin-top: 80px;
-        padding: 0.5rem 0 0.25rem 1.25rem;
-        font-size: 14px;
-        margin-bottom: 20px;
-        gap: 13px;
-    }
 
-    .second-section .cts {
-        font-size: 14px;
-    }
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-    .second-section span {
-        font-size: 20px;
-    }
 
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
 
-    .second-section .cts p {
-        font-size: 6px;
-        font-style: italic;
-    }
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: block;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 5px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
+}
 
 }
+
+
+
 
 @media only screen and (max-width: 1000px) and (min-width: 800px) {
 
-    body {
+   body {
         background-color: white;
     }
 
@@ -644,580 +867,216 @@ header a {
         background-color: #fff;
     }
 
-    .container .main .hero-logo {
+    header {
         width: 100%;
-        height: 2vh;
+        height: 2.5vh;
         padding: 0.12rem 0 0.125rem 0.125rem;
         font-size: 0.625rem;
         font-weight: bold;
-    }
-
-    .container .logo a {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
         text-decoration: none;
-        color: black;
-        font-weight: bolder;
-    }
-
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        font-weight: 18.75rem;
-        font-size: 1.125rem;
-        position: relative;
-    }
-
-    main .hero p {
-        position: absolute;
-        top: 35%;
-    }
-
-    main {
-        display: block;
-        width: 100%;
-        height: 75vh;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
-
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        height: 350px;
-        margin: 25px 0 40px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
-
-
-    main ul li {
-        display: inline;
-    }
-
-    main .ul-div li a i {
-        color: black;
-    }
-
-    main .second-section {
-        width: 100%;
-    }
-
-
-    .key-officers {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        background-color: #fff;
-        line-height: 2;
-        padding: 20px 10px 0 40px;
-        color: black;
-    }
-
-    .second-section .cts {
-        width: 100%;
-        font-size: 12px;
-        margin-top: 280px;
-    }
-
-
-    .second-section span {
-        font-size: 17px;
-        padding-bottom: 15px;
-    }
-
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
-
-    .second-section .cts p {
-        font-size: 10px;
-        font-style: italic;
-    }
-
-}
-
-
-
-
-
-@media only screen and (max-width: 800px) and (min-width: 600px) {
-
-    body {
         background-color: white;
     }
 
-    .container {
-        width: 100%;
-        height: 60vh;
-        background-color: #fff;
-    }
-
-    .container .main .hero-logo {
-        width: 100%;
-        height: 2vh;
-        padding: 0.12rem 0 0.125rem 0.125rem;
-        font-size: 0.625rem;
-        font-weight: bold;
-    }
-
-    .container .logo a {
+    header a {
         text-decoration: none;
         color: black;
         font-weight: bolder;
     }
 
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        align-content: center;
-        font-weight: 18.75rem;
-        font-size: 1.125rem;
-        position: relative;
+    .hero {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+    padding-top: 60px;
+    margin-bottom: 20px;
     }
 
-    main .hero p {
-        position: absolute;
-        top: 15%;
-    }
-
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
-
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-
-
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
-
-
-    main ul li {
-        display: inline;
-    }
-
-    main .ul-div li a i {
-        color: black;
-    }
-
-    main .second-section {
-        width: 100%;
-    }
-
-    .key-officers {
-        display: block;
-        margin-top: 80px;
-        padding: 0.5rem 0 0.25rem 1.25rem;
-        font-size: 14px;
-        margin-bottom: 20px;
-        gap: 13px;
-    }
-
-    .second-section .cts {
-        font-size: 14px;
-    }
-
-    .second-section span {
-        font-size: 20px;
-    }
-
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
-
-    .second-section .cts p {
-        font-size: 6px;
-        font-style: italic;
-    }
-
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 800px) {
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(2.5em, 7vw, 3em);
+    /* font-size: 4.3em; */
+    /* margin-bottom: 7px; */
+    position: absolute;
+    top: 30%;
+}
 
-    body {
-        background-color: white;
-    }
-
-    .container {
-        width: 100%;
-        height: 60vh;
-        background-color: #fff;
-    }
-
-    .container .main .hero-logo {
-        width: 100%;
-        height: 2vh;
-        padding: 0.12rem 0 0.125rem 0.125rem;
-        font-size: 0.625rem;
-        font-weight: bold;
-    }
-
-    .container .logo a {
-        text-decoration: none;
-        color: black;
-        font-weight: bolder;
-    }
-
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        align-content: center;
-        font-weight: 18.75rem;
-        font-size: 1.125rem;
-        position: relative;
-    }
-
-    main .hero p {
-        position: absolute;
-        top: 35%;
-    }
-
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
-
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        height: 350px;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    section .address {
-        width: 100%;
-        height: 100%;
-        margin-top: 30px;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-        margin-left: 5px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
 
 
-    main ul li {
-        display: inline;
-    }
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: -20px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+    
+}
 
-    main .ul-div li a i {
-        color: black;
-    }
 
-    main .second-section {
-        width: 100%;
-    }
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
 
-    .key-officers {
-        display: flex;
-        margin-top: 10px;
-        padding: 0.5rem 0 0.25rem 1.25rem;
-        font-size: 14px;
-        margin-bottom: -80px;
-        gap: 13px;
-        line-height: 3;
-    }
 
-    .second-section .cts {
-        font-size: 10px;
-    }
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-    .second-section span {
-        font-size: 14px;
-    }
 
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 450px;
+    display: block;
+    margin: 20px 1.5px 300px 10px;
+    align-items: center;
+}
 
-    .second-section .cts p {
-        font-size: 7px;
-        font-style: italic;
-    }
+
+.map .iframe {
+    display: block;
+    width: 97%;
+    height: 100%;
+    margin-bottom: 40px;
+    margin-right: 2%;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 55px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    /* margin-top: -20px; */
+    line-height: 1.5;
+    margin-bottom: 100px;
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: -250px;
+    line-height: 2;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 14px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 9px;
+    font-style: italic;
+}
 
 }
 
 
 
 
-@media only screen and (max-width: 1200px) and (min-width: 1000px) {
 
-    body {
-        background-color: white;
-    }
-
-    .container {
-        width: 100%;
-        height: 60vh;
-        background-color: #fff;
-    }
-
-    .container .main .hero-logo {
-        width: 100%;
-        height: 2vh;
-        padding: 0.12rem 0 0.125rem 0.125rem;
-        font-size: 0.625rem;
-        font-weight: bold;
-    }
-
-    .container .logo a {
-        text-decoration: none;
-        color: black;
-        font-weight: bolder;
-    }
-
-    main .hero {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        justify-content: center;
-        align-content: center;
-        font-weight: 18.75rem;
-        font-size: 1.125rem;
-        position: relative;
-    }
-
-    main .hero p {
-        position: absolute;
-        top: 15%;
-    }
-
-    main {
-        display: block;
-        width: 100%;
-        padding-top: 0.3125rem;
-        color: #fff;
-    }
-
-    main .map {
-        width: 100%;
-        margin: 0 0 0 0.3125rem;
-        padding: 0 0.3125rem 0.3125rem 0.3125rem;
-    }
-
-    section .parent {
-        display: block;
-        width: 100%;
-    }
-
-    section .iframe-div {
-        width: 97%;
-        margin: 15px 0 10px -22px;
-    }
-
-    main .map iframe {
-        width: 100%;
-
-
-    }
-
-    section .address {
-        width: 100%;
-    }
-
-    main .address-div {
-        width: 100%;
-        color: black;
-        padding-left: 20px;
-        font-size: 8px;
-    }
-
-    main .address-div h1 {
-        font-size: 13px;
-    }
-
-    main .ul-div {
-        margin-top: 20px;
-    }
-
-    main .ul-div h1 {
-        font-size: 7px;
-    }
-
-    main ul {
-        display: flex;
-        gap: 7px;
-    }
-
-
-    main ul li {
-        display: inline;
-    }
-
-    main .ul-div li a i {
-        color: black;
-    }
-
-    main .second-section {
-        width: 100%;
-    }
-
-    .key-officers {
-        display: flex;
-        margin-top: 80px;
-        padding: 0.5rem 0 0.25rem 1.25rem;
-        font-size: 14px;
-        margin-bottom: 20px;
-        gap: 13px;
-        color: red;
-    }
-
-    .second-section .cts {
-        font-size: 14px;
-    }
-
-    .second-section span {
-        font-size: 20px;
-    }
-
-    .second-section span hr {
-        width: 50px;
-        height: 2px;
-        margin-top: -10px;
-        color: black;
-    }
-
-    .second-section .cts p {
-        font-size: 6px;
-        font-style: italic;
-    }
-
-}
