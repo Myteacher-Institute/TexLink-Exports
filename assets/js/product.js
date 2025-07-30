@@ -1,84 +1,121 @@
-// Sample product data
+// 1️⃣ Define the product data
 const products = [
     {
-      id: 1,
-      name: "Tropical Print Shirt",
-      price: "$39.99",
-      description: "A lightweight tropical shirt, perfect for summer.",
-      images: ["images/Tropical Shirt main.jpg", "images/Tropical Shirt th", "images/Tropical Shirt th2"]
+        id: 1,
+        name: "Tropical Shirt",
+        price: "$39.99",
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
     },
     {
-      id: 2,
-      name: "Urban Black Hoodie",
-      price: "$59.99",
-      description: "Premium cotton hoodie for streetwear lovers.",
-      images: ["images/shirt2-main.jpg", "images/shirt2-1.jpg", "images/shirt2-2.jpg"]
+        id: 2,
+        name: "Urban Hoodie",
+        price: "$49.99",
+        description: "A cool hoodie for streetwear lovers.",
+        image: "../images/Urban Black Hoodie main.jpg"
+    },
+    {
+        id: 3,
+        name: "Woven Tartan",
+        price: "$29.99",
+        description: "Fine checkered Tartan.",
+        image: "../images/women woven tartan.jpg"
+    },
+    {
+        id: 4,
+        name: "Vintage Men's Shirts",
+        price: "$59.99",
+        description: "Smart Red-White Vintage Shirt for Men",
+        image: "../images/vintage-shirts-men-1.jpg"
+    },
+    {
+        id: 5,
+        name: "Green Wool Linen",
+        price: "$19.99",
+        description: "Green Woll Linen",
+        image: "../images/Green wool linen.jpg"
+    },
+    {
+        id: 6,
+        name: "Christmas Plaid Dress",
+        price: "$39.99",
+        description: "Plaid Dress for the Holidays",
+        image: "../images/plaid christmas dress.jpg"
+    },
+    {
+        id: 7,
+        name: "Red Silk Fabric",
+        price: "$39.99",
+        description: "Red Silk Fabric",
+        image: "../images/Red silk fabric.jpg"
+    },
+    {
+        id: 8,
+        name: "Tropical Shirt",
+        price: "$39.99",
+        description: "Blue Cardigan Set",
+        image: "../images/product 33.jpg"
+    },
+    {
+        id: 9,
+        name: "Navy Plaid Gown",
+        price: "$45.50",
+        description: "Women Navy Plaid Gown",
+        image: "../images/women navy plaid gown.jpg"
+    },
+    {
+        id: 10,
+        name: "Pearl Blush Fabric",
+        price: "$12.43",
+        description: "A lightweight summer shirt.",
+        image: "../images/Tropical Shirt th.jpg"
+    },
+    {
+        id: 11,
+        name: "Men's Senator",
+        price: "$16.00",
+        description: "Nice Men Senator.",
+        image: "../images/Nice men senator.jpg"
+    },
+];
+
+const items = document.querySelectorAll(".gallery-item");
+const gallery = document.getElementById("gallery");
+const productPage = document.getElementById("product-page");
+const backBtn = document.getElementById("back-btn");
+
+items.forEach(item => {
+    const id = parseInt(item.dataset.id);
+    const product = products.find(p => p.id === id);
+
+    if (product) {
+        item.querySelector(".product-name").textContent = product.name;
+        item.querySelector(".product-price").textContent = product.price;
+
+        // ✅ Show product detail on click
+        item.addEventListener("click", () => {
+            document.getElementById("product-title").textContent = product.name;
+            document.getElementById("product-price").textContent = product.price;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("main-img").src = product.image;
+
+            gallery.classList.add("hidden");
+            productPage.classList.remove("hidden");
+        });
     }
-  ];
-  
-  // DOM Elements
-  const gallery = document.getElementById("gallery");
-  const productPage = document.getElementById("product-page");
-  const backBtn = document.getElementById("back-btn");
-  
-  // Product Page Elements
-  const mainImg = document.getElementById("main-img");
-  const thumbnails = document.getElementById("thumbnails");
-  const titleEl = document.getElementById("product-title");
-  const priceEl = document.getElementById("product-price");
-  const descEl = document.getElementById("product-description");
-  
-  // Load gallery
-  products.forEach((product, index) => {
-    const item = document.createElement("div");
-    item.classList.add("gallery-item");
-    item.innerHTML = `
-      <img src="${product.images[0]}" alt="${product.name}" />
-      <h3>${product.name}</h3>
-      <p>${product.price}</p>
-    `;
-    item.addEventListener("click", () => showProduct(index));
-    gallery.appendChild(item);
-  });
-  
-  // Show product details
-  function showProduct(index) {
-    const product = products[index];
-    gallery.classList.add("hidden");
-    productPage.classList.remove("hidden");
-  
-    // Load product info
-    titleEl.textContent = product.name;
-    priceEl.textContent = product.price;
-    descEl.textContent = product.description;
-    mainImg.src = product.images[0];
-  
-    // Load thumbnails
-    thumbnails.innerHTML = "";
-    product.images.forEach((imgSrc) => {
-      const thumb = document.createElement("img");
-      thumb.src = imgSrc;
-      thumb.classList.add("thumb");
-      thumb.addEventListener("click", () => {
-        mainImg.src = imgSrc;
-      });
-      thumbnails.appendChild(thumb);
-    });
-  }
-  
-  // Back to gallery
-  backBtn.addEventListener("click", () => {
+});
+
+backBtn.addEventListener("click", () => {
     productPage.classList.add("hidden");
     gallery.classList.remove("hidden");
-  });
-  
-  // Add to cart action
-  document.getElementById("add-to-cart").addEventListener("click", () => {
+});
+
+document.getElementById("add-to-cart").addEventListener("click", () => {
     const size = document.getElementById("size").value;
     const qty = document.getElementById("qty").value;
     if (!size) {
-      alert("Please select a size.");
-      return;
+        alert("Please select a size.");
+        return;
     }
     alert(`Added ${qty} item(s) of size ${size} to cart!`);
-  });
+});

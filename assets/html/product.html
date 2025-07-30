@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Products — TexLink Exports</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TexLink Exports - Product Gallery</title>
+        <link rel="stylesheet" href="../css/product.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    </head>
 
+<<<<<<< HEAD
 <body>
      <header>
             <a href="./index.html"><img src="./assets/images/logo.jpg" alt="TexLink Exports Logo"></a>
@@ -43,35 +45,125 @@
         <div class="image-gallery">
             <div class="main-image">
                 <img src="images/main-placeholder.jpg" alt="Product Image" id="main-img" />
+=======
+    <body>
+        <!-- 🧾 Product Detail Page -->
+        <div id="product-page" class="product-container hidden">
+
+            <div class="image-gallery">
+                <div class="main-image">
+                    <!-- <h2 style="width: 200px; font-size: 30px;" class="hidden"></h2> -->
+                    <img alt="Main Image" id="main-img">
+                </div>
             </div>
-            <div class="thumbnails" id="thumbnails"></div>
+
+            <div class="product-details">
+                <h1 id="product-title" class="product-title"></h1>
+                <p id="product-price" class="product-price"></p>
+                <p id="product-description" class="product-description"></p>
+
+                <div class="options">
+                    <label for="size">Size:</label>
+                    <select id="size">
+                        <option value="">Select size</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div class="quantity">
+                    <label for="qty">Quantity:</label>
+                    <input type="number" id="qty" value="1" min="1" />
+                </div>
+
+                <button id="add-to-cart">Add to Cart</button>
+>>>>>>> 56132b8fa6adc39c399452fdc237df1ddaf1a18f
+            </div>
         </div>
 
-        <div class="product-details">
-            <h1 class="product-title" id="product-title"></h1>
-            <p class="product-price" id="product-price"></p>
-            <p class="product-description" id="product-description"></p>
-
-            <div class="options">
-                <label for="size">Size:</label>
-                <select id="size">
-                    <option value="">Select size</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
+        <!-- 🖼 Product Gallery -->
+        <div id="gallery" class="gallery">
+            <div class="gallery-item" data-id="1">
+                <img src="../images/Tropical Shirt th.jpg" alt="Tropical Shirt" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart <i class="fa-solid fa-cart"></i></button>
             </div>
 
-            <div class="quantity">
-                <label for="qty">Quantity:</label>
-                <input type="number" id="qty" value="1" min="1" />
+            <div class="gallery-item" data-id="2">
+                <img src="../images/Urban Black Hoodie main.jpg" alt="Urban Hoodie" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
             </div>
 
-            <button id="add-to-cart">Add to Cart</button>
+            <div class="gallery-item" data-id="3">
+                <img src="../images/women woven tartan.jpg" alt="Tartan" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="4">
+                <img src="../images/vintage-shirts-men-1.jpg" alt="vintage-shirts-men-1" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="5">
+                <img src="../images/Green wool linen.jpg" alt="Green wool" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="6">
+                <img src="../images/plaid christmas dress.jpg" alt="Christmas Dress">
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="7">
+                <img src="../images/Red silk fabric.jpg" alt="Red Silk">
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="8">
+                <img src="../images/product 33.jpg" alt="Blue Cardigan Set">
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="9">
+                <img src="../images/women navy plaid gown.jpg" alt="Plaid Gown" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="10">
+                <img src="../images/pearl Blush fabric.jpg" alt="Blush fabric" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="gallery-item" data-id="11">
+                <img src="../images/Nice men senator.jpg" alt="Men Senator" />
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
         </div>
-    </div>
 
+<<<<<<< HEAD
     <footer>
 
             <div class="body">
@@ -134,5 +226,13 @@
         
     <script src="../js/product.js"></script>
 </body>
+=======
+        <script src="../js/product.js"></script>
+    </body>
+>>>>>>> 56132b8fa6adc39c399452fdc237df1ddaf1a18f
 
-</html>
+
+
+    <!-- Redo: NIgerian-made  -->
+
+    </html>
