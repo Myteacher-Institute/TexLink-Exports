@@ -1,3 +1,32 @@
+const cartIcon = document.querySelector("#cart-icon");
+const cart = document.querySelector(".cart");
+const cartClose = document.querySelector("#cart-close");
+cartIcon.addEventListener("click", () => cart.classList.add("active")); // to make the cart section open
+console.log(cartClose)
+cartClose.addEventListener("click", () => cart.classList.remove("active")); // to make the cart section close
+const addCartButtons = document.querySelectorAll(".add-cart"); // to target the add cart button
+addCartButtons.forEach(button => {
+    button.addEventListener("click", event => {
+        const productBox = event.target.closest(".product-box");
+        addTocart(productBox)
+    });
+});
+const cartContent = document.querySelector(".cart-content");
+const addTocart = productBox => {
+    const ProductimageBox = productBox.querySelector("img")
+    const productImgSrc = productBox.querySelector("img").src
+    const productPrice = productBox.querySelector(".price").textContent;
+    const productTitle = productBox.querySelector(".product-title").textContent;
+
+    const cartItems = cartContent.querySelectorAll(".cart-product-title");
+    for (let item of cartItems) {
+        if (item.textContent === productTitle) {
+            alert("This item is already in the cart.");
+            return;
+        }
+
+    }
+};
 // 1️⃣ Define the product data
 const products = [
     {
