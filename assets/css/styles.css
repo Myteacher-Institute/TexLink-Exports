@@ -97,7 +97,7 @@ main .hero {
     height: 70dvh;
     display: grid;
     position: relative;
-    place-items: center;
+    /* place-items: center; */
     background-color: rgba(0, 0, 0, 0.730);
 }
 
@@ -109,6 +109,58 @@ main .hero img {
     position: absolute;
 }
 
+/* main .hero .slider-wrapper {
+    width: 100%;
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+main .hero .slider {
+    width: 1200px;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25%);
+    border-radius: 0.5rem;
+}
+
+main .hero .slider img {
+    flex: 1 0 100%;
+    height: 70dvh;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+main .hero .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+main .hero .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+main .hero .slider-nav a:hover {
+    opacity: 1;
+}
+
+main .hero .slide-1, slide-2, slide-3 {
+    width: 100%;
+} */
+
 main .hero-text {
     gap: 5px;
     display: flex;
@@ -117,7 +169,7 @@ main .hero-text {
     justify-content: center;
 }
 
-main .hero-text h2 {
+main .hero-text h1 {
     color: #fff;
     font-size: 3.3em;
     font-weight: 700;
