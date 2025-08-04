@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
+
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const cartClose = document.querySelector("#cart-close");
@@ -18,11 +14,11 @@ addCartButtons.forEach(button => {
 });
 const cartContent = document.querySelector(".cart-content");
 const addTocart = productBox => {
-<<<<<<< Updated upstream
-    const ProductimageBox = productBox.querySelector("img")  
-=======
+
+    // const ProductimageBox = productBox.querySelector("img")
+
     const ProductimageBox = productBox.querySelector("img")
->>>>>>> Stashed changes
+
     const productImgSrc = productBox.querySelector("img").src
     const productPrice = productBox.querySelector(".price").textContent;
     const productTitle = productBox.querySelector(".product-title").textContent;
@@ -57,11 +53,8 @@ const addTocart = productBox => {
 
         updateTotalPrice();
     });
-<<<<<<< Updated upstream
-// increasing and decreasing
-=======
     // increasing and decreasing
->>>>>>> Stashed changes
+    // increasing and decreasing
     cartBox.querySelector(".cart-quantity").addEventListener("click", event => {
         const numberElement = cartBox.querySelector(".number");
         const decreamentButton = cartBox.querySelector("#decreament");
@@ -89,25 +82,15 @@ const updateTotalPrice = () => {
     const totalPriceElement = document.querySelector(".total-price");
     const cartBoxes = cartContent.querySelectorAll(".cart-box");
     let total = 0;
-<<<<<<< Updated upstream
-    cartBoxes.forEach (cartBox => {
-=======
     cartBoxes.forEach(cartBox => {
->>>>>>> Stashed changes
+        // cartBoxes.forEach(cartBox =>
         const priceElement = cartBox.querySelector(".cart-price");
-        const quantityElement = cartBox.querySelector(".number");
-        const price = priceElement.textContent.replace("$", "");
-        const quantity = quantityElement.textContent;
-        total += parseInt(price) * quantity;
-    });
-    totalPriceElement.textContent = `$${total}`;
-<<<<<<< Updated upstream
-        
-    
-};
-=======
+            const quantityElement = cartBox.querySelector(".number");
+            const price = priceElement.textContent.replace("$", "");
+            const quantity = quantityElement.textContent;
+            total += parseInt(price) * quantity;
+        });
+        totalPriceElement.textContent = `$${total}`;
 
 
-};
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    };
