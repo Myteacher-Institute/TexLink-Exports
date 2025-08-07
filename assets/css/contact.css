@@ -17,6 +17,38 @@ body {
     background-color: white;
 }
 
+#search {
+    width: 300px;
+}
+
+#srch {
+    height: 30px;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    border-right: none;
+    margin: 0;
+} 
+
+
+#search .srch:focus {
+    outline: none;
+}
+
+#search a {
+    text-decoration: none;
+    margin-left: 1px;
+    border: none;
+}
+
+#search a i {
+    color: #000;
+    font-size: 1.3em;
+}
+
+
 header {
     top: 0;
     width: 100%;
