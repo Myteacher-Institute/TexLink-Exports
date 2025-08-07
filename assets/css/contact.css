@@ -1,451 +1,1313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root {
+    --pri: #fff;
+    --sec: rgb(215, 213, 213);
+}
 
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.container {
-    width: 100%;
-    min-height: 100vh;
+body {
     background-color: white;
 }
 
-.container .hp {
-    margin: 15px 0 15px 15px;
-    height: 15gpx;
-    
+#search {
+    width: 300px;
 }
 
-.container .hp a {
-    text-decoration: none;
-    color: black;
+#srch {
+    height: 30px;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    border-right: none;
+    margin: 0;
+} 
+
+
+#search .srch:focus {
+    outline: none;
 }
+
+#search a {
+    text-decoration: none;
+    margin-left: 1px;
+    border: none;
+}
+
+#search a i {
+    color: #000;
+    font-size: 1.3em;
+}
+
 
 header {
-    display: flex;
+    top: 0;
     width: 100%;
-    height: 250px;
-    background-color: #f5f5f5;
-    justify-content: center;
-    align-content: center;
-    font-weight: 700px;
-    font-size: 60px;
-    letter-spacing: 40px;
+    height: 70px;
+    background-color: rgba(235, 234, 234, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: sticky;
+    z-index: 1;
+}
+
+header .bars {
+    display: none;
+}
+
+/* header nav {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+} */
+
+header nav .close {
+    display: none;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0 45px;
+}
+
+header nav ul li a:hover {
+    font-size: 1.1em;
+}
+
+header nav ul li a.active {
+    color: var(--sec);
+    font-size: 1.1em;
+}
+
+header nav ul li a i {
+    margin-right: 7px;
+}
+
+header nav ul li a:hover i {
+    font-size: x-large;
+}
+
+/* header {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-decoration: none;
+    background-color: white;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: bolder;
     color: black;
-    padding: 40px 0 0 40px;
-    background-image: url("../Images/b-picture.jpg");
+} */
+
+
+/* Hero styling */
+.hero {
+    width: 100%;
+    height: 50dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
     background-size: cover;
+    justify-content: center;
+    background-color: white;
     background-repeat: no-repeat;
-    filter: brightness(100%);
+    background-image: url("../Images/fabric.jpg");
 }
 
-header .cu {
-    margin: auto;
-}
-
-main {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    height: 100vh;
-    background-color: lightgray;
-    color: black;
-    padding-top: 20px;
-}
-
-main .s1{
-    width: 40%;
-    height: 100vh;
-    margin: auto;
-}
-
-main .s1 .enquiry{
-    background-color: #ffffff;
+.hero::before {
+    inset: 0;
+    content: '';
     width: 100%;
-    height: 80px;
-    padding: 20px 0 0 20px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-top: 56px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-main .s1 .enquiry p {
-    margin-left: -1px;
+.hero h1 {
+    z-index: 1;
+    font-size: clamp(4.3em, 7vw, 5em);
+    /* font-size: 4.3em; */
 }
 
-main .s1 .enquiry:hover {
-    background-color: rgb(244, 234, 234);
-    color: black;
-}
-
-form {
-    height: 600px;
-    padding-top: 30px;
-    gap: 20px;
-    padding-left: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-form p {
-    font-weight: 300px;
-}
-
-form:hover{
-    background-color: white;
-    color:black ;
-}
-
-form input{
-    padding: 5px 40px ;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-form input:hover {
-    background-color: black;
-}
-
-.submit{
-    margin: 10px 0 10px 0;
-    padding: 5px 20px;
-    border: 2px solid light lightgray;
-    border-radius: 10px;
-    background-color: white;
+.hero p {
+    z-index: 1;
+    font-size: 1.8em;
+    word-spacing: 2px;
+    text-align: center;
     font-weight: bolder;
 }
 
-.warning{
-    margin-left: 1px;
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 40px;
+    width: 130px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1.5px 0 0 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    background-color: rgb(215, 213, 213);
 }
 
-button:hover{
+.hero button:hover {
+    color: black;
+    font-size: 1.05em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.map {
+    gap: 4rem;
+    height: 500px;
+    display: flex;
+    margin: 50px 25px;
+    align-items: center;
+}
+
+.map .iframe {
+    width: 50%;
+    height: 100%;
+}
+
+.map .address {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+}
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact h3 {
+    font-weight: 300;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(211, 209, 209);
     color: white;
-    background-color: lightgray;
+    gap: 5px;
 }
 
-main .s2 {
-    width: 40%;
-    height: 700px;
-    margin: auto;
-    background-image: url("../Images/main-body-pic.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 1.05em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: flex;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 2;
+    padding: 20px 10px 0 40px;
+    color: black;
+    margin-top: -100px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 70px;
+}
+
+
+.key-officers span {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+
+.key-officers .cts p {
+    font-size: 12px;
+    font-style: italic;
 }
 
 footer {
     width: 100%;
-    height: 600px;
-    background-color: lightgray;
-}
-
-footer .f1 {
-    display: flex;
-    background-color: lightgray;
-}
-
-footer .f1 iframe{
-    width: 50%;
     height: 400px;
-    margin: 30px 0 20px 30px;
-}
-
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
-}
-
-
-footer .customer .cr{
-    display: flex;
-    width: 100%;
-    height: 70px;
-    justify-content: center;
-    align-content: center;
-    color: black;
-    font-size: 70px;
-    padding: 30px 0 90px 0;
-    letter-spacing: 10px;
-    text-shadow: 3px 3px 5px;
-} 
-
-
- .f2 .reviews{
-    display: flex;
-    width: 100%;
-    height: 300px;
-    color: black;
+    background-color: #000;
     justify-content: space-around;
-    gap: 5px;
-    margin-top: 60px;
-    
-}
- 
-.f2 .reviews .wrapper {
-    background-color: goldenrod;
-    width: 90%;
-    height: 300px;  
-    margin: 1.5px;
+    color: #fff;
 }
 
-
-footer div .hoa, .adr {
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-footer div .fa-solid{
-    margin-left: 30px;
-}
-
-footer .number{
-    color: gold;
-    letter-spacing: 10px;
-}
-
-h3 .fa-solid {
-    margin-left: 0;
-    color: gold;
-}
-
-footer .customer {
-display: flex;
-height: 100px;
-color: black;
-justify-content: center;
-align-content: center;
-}
-
-.customer .cr {
-    font-size: 40px;
-}
-
-
-.f2 .reviews {
-    display: fle;
-}
-
-
-
-.wrapper {
-    padding: 30px 20px 200px 30px;
-
-} 
-
-.reviews .wrapper h2{
-    background-color: white;
-    border-radius: 10px;
-    height: 30px;
-    width: 180px;
+footer ul,
+footer ul li,
+footer ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
     margin-bottom: 10px;
-    padding-left: 10px;
-    margin-left: 30px;
-    color: black;
 }
 
-.img {
-    margin: 0 10px 20px 60px;
-    border-radius: 50%;
+footer .fa-solid {
+    color: #fff;
+    margin-right: 7px;
 }
 
+footer .fa-solid:hover {
+    color: var(--pri);
+}
 
-
-.btn {
-    background: none;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    /* padding: 5px 10px 5px 10px; */
-    margin: 70px 0 50px 10px;
-    border: 2px solid white;
-} 
-
-
-footer .f22{
-    display: flex;
-    background-color: lightgray;
+footer .top {
     width: 100%;
-    height: 430px;
+    height: 110px;
+    background-color: var(--sec);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 15px;
+    color: #000;
+}
+
+footer .top ul {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+footer .top ul li {
+    margin-right: 12px;
+    display: inline-flex;
+}
+
+
+footer .body {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+footer .body hr {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+footer .body>div img {
+    width: 112px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 55px 0 0 5px;
+}
+
+footer .body h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+}
+
+footer .body .one img {
+    width: 120px;
+    height: 120px;
+}
+
+
+footer .body .one a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .body .two ul .black a {
+    color: #000;
+}
+
+footer .body .four {
+    margin-top: 55px;
+}
+
+footer .body .four ul ul {
+    display: flex;
+    list-style-type: none;
+}
+
+footer .body .four ul ul li {
+    margin: 20px 20px 0 0;
+}
+
+footer .four ul ul li a:hover {
+    font-size: 1.1em;
+}
+
+
+footer .bottom {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer .bottom h4 {
     margin-top: 10px;
 }
 
-
- .key-officers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    line-height: 2.5;
-    justify-content: space-between;
-    align-content: center;
-
+footer .bottom a {
+    text-decoration: none;
+    color: #fff;
 }
 
-.cts, p, h3 {
-    margin-left: 30px;
-}
 
-.cts {
-    margin-top: 30px;
-}
 
-span{
-    color: black;
-}
 
-.cts h3{
-    color: black;
-    font-size: 25px;
-}
 
-b {
-    color: black;
-    margin-right: 10px;
-}
 
-footer .socials {
-    display: flex;
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) and (min-width: 360px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    header {
+        width: 100%;
+        height: 2.5vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
+    }
+
+    header a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .hero {
     width: 100%;
-    height: 60px;
-    background-color: gray;
-    justify-content: space-between;
-    align-content: center;
-}
-
-footer ul {
- margin-top: 30px;
-}
-
-footer ul li {
-    display: inline;
-    margin-left: 150px;
-    height: 70px;
-    font-weight: bolder;
-}  
-
-
-
-
-
-@media only screen and (max-width: 360px) {
-  .container {
-    background-color: red;
-  }
-  header {
+    height: 20dvh;
     display: flex;
-    height: 60px;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
     justify-content: center;
-    align-content: center;
-    font-weight: 20;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: black;
-    padding: 10px;
-  }
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+    }
 
-  main {
-    display: block;
+   .hero::before {
+    inset: 0;
+    content: '';
     width: 100%;
-    padding-top: 2px;
-    height: 760px;
-    background-color: purple;
-    color: blue;
-    padding-top: 5px;
-  }
-  
-  main .s1{
-    width: 100%;
-    height: 70px;
-    padding: 5px 0 0 5px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-top: 15px;
-  }
-
-  main .s1 .enquiry {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100px;
-    padding: 5px 0 0 15px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    margin-top: 15px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-main .s1 .enquiry h1 {
- padding: 5px 0 0 30px;
- }
-
-main .s1 .enquiry p {
- padding: 5px 0 0 0;
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
 }
 
-form {
-    height: 600px;
-    padding-top: 30px;
-    gap: 20px;
-    padding-left: 10px;
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
     font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
+
+
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
+
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
     color: black;
 }
 
-form p {
-    font-weight: 300px;
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
 }
 
-main .s2 {
-    background-image: none;
+.location button a {
+    text-decoration: none;
+    color: white;
 }
 
-footer {
-    width: 100%;
-    height: 300px;
-    background-color: lightgray;
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
 }
 
-footer .f1 {
+
+.key-officers {
     display: block;
-    background-color: lightgray;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
 }
-footer .f1 iframe{
-    height: 150px;
+
+.key-officers .cts {
     width: 100%;
-    height: 400px;
-    margin: 10px;
-    padding-right: 20px;
+    font-size: 5px;
+    margin-top: 20px;
 }
 
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
-}
-footer .f1 div {
-    width: 40%;
-    height: 400px;
-    margin: auto;
-    background-color: white;
-    line-height:2;
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
 }
 
-footer .f1 div {
-    width: 90%;
-    height: 300px;
-    margin-top: 1px;
-    background-color: white;
-    line-height:1;
-    padding-top: 20px;
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
 }
 
 }
+
+
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+
+   body {
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    header {
+        width: 100%;
+        height: 2.5vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
+    }
+
+    header a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .hero {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+    }
+
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
+}
+
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
+
+
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
+
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: block;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 5px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
+}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    header {
+        width: 100%;
+        height: 2.5vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
+    }
+
+    header a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .hero {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+    }
+
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(1.5em, 7vw, 2em);
+    /* font-size: 4.3em; */
+    margin-bottom: 7px;
+}
+
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+}
+
+
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin: 20px 10px 300px 10px;
+    align-items: center;
+}
+
+
+.map .iframe {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    margin-top: -20px;
+    line-height: 1.5;
+    /* margin-bottom: 100px; */
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: block;
+    width: 85%;
+    /* justify-content: center; */
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 5px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 11px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 6px;
+    font-style: italic;
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+
+   body {
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+    }
+
+    header {
+        width: 100%;
+        height: 2.5vh;
+        padding: 0.12rem 0 0.125rem 0.125rem;
+        font-size: 0.625rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-decoration: none;
+        background-color: white;
+    }
+
+    header a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .hero {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-image: url("../Images/fabric.jpg");
+    padding-top: 60px;
+    margin-bottom: 20px;
+    }
+
+   .hero::before {
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+   .hero h1 {
+    z-index: 1;
+    font-size: clamp(2.5em, 7vw, 3em);
+    /* font-size: 4.3em; */
+    /* margin-bottom: 7px; */
+    position: absolute;
+    top: 30%;
+}
+
+    .hero p {
+    z-index: 1;
+    font-size: 0.8em;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+
+.hero button {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 20px;
+    width: 100px;
+    box-shadow: #e6e6e6d5 0px 5px 10px;
+    padding: 1px 0 0 15px;
+    cursor: pointer;
+    margin-top: -20px;
+    font-weight: bold;
+    border-radius: 3px;
+    /* letter-spacing: 2px; */
+    background-color: rgb(215, 213, 213);
+    font-size: 11px;
+    
+}
+
+
+.hero button:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.hero button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.map {
+    gap: 4rem;
+    width: 100%;
+    height: 450px;
+    display: block;
+    margin: 20px 1.5px 300px 10px;
+    align-items: center;
+}
+
+
+.map .iframe {
+    display: block;
+    width: 97%;
+    height: 100%;
+    margin-bottom: 40px;
+    margin-right: 2%;
+}
+
+.map .iframe iframe{
+    width: 100%;
+    height: 100%;
+    margin-right: 55px;
+    
+}
+
+.map .address {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    /* margin-top: -20px; */
+    line-height: 1.5;
+    margin-bottom: 100px;
+}
+
+
+.address .icons {
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+}
+
+.address .location .contact .adr {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address .icons .fa-brands {
+    color: black;
+}
+
+
+.location button {
+    z-index: 1;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 7px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(211, 209, 209);
+    color: white;
+    gap: 2px;
+}
+
+.location button a {
+    text-decoration: none;
+    color: white;
+}
+
+.location button a:hover {
+    color: black;
+    font-size: 0.7em;
+    transition: font-size 0.4s ease-in-out;
+    background-color: rgb(215, 213, 213);
+}
+
+
+.key-officers {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    line-height: 1;
+    padding: 10px 5px 0 10px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: -250px;
+    line-height: 2;
+}
+
+.key-officers .cts {
+    width: 100%;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+
+.key-officers span {
+    font-size: 14px;
+    padding-bottom: 6px;
+}
+
+
+.key-officers .cts p {
+    font-size: 9px;
+    font-style: italic;
+}
+
+}
+
+
+
+
 
